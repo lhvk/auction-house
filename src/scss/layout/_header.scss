@@ -1,0 +1,17 @@
+@use "../utils/functions";
+@use "../utils/variables";
+
+.logo {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-family: functions.getFont(primary);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar-nav {
+  gap: 20px;
+}

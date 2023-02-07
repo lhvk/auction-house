@@ -1,0 +1,12 @@
+@use "../utils/variables";
+@use "../utils/functions";
+
+.primary-text {
+  font-family: functions.getFont(primary);
+  color: functions.getColor(text);
+}
+
+.headings-text {
+  font-family: functions.getFont(secondary);
+  color: functions.getColor(text);
+}

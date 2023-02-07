@@ -1,0 +1,18 @@
+@use "sass:meta";
+
+$ff-primary: "Roboto", sans-serif;
+$ff-secondary: "EB Garamond", serif;
+
+$colors: (
+  "primary": #d7cec7,
+  "secondary": #76323f,
+  "text": #222,
+  "dark": #212120,
+  "light-grey": #d3d3d3,
+  "off-white": #f5f4f4,
+);
+
+$fonts: (
+  "primary": meta.inspect($ff-primary),
+  "secondary": meta.inspect($ff-secondary),
+);

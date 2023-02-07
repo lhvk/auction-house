@@ -1,0 +1,9 @@
+@use "./variables";
+
+@function getColor($color) {
+  @return map-get(variables.$colors, $color);
+}
+
+@function getFont($font) {
+  @return map-get(variables.$fonts, $font);
+}
