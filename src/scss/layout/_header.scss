@@ -1,6 +1,10 @@
 @use "../utils/functions";
 @use "../utils/variables";
 
+.upper-nav {
+  background-color: functions.getColor(primary);
+}
+
 .logo {
   font-family: "Times New Roman", Times, serif;
   letter-spacing: 1px;

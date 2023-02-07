@@ -1,0 +1,10 @@
+@use "../utils/functions";
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: functions.getColor(primary);
+}

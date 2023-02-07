@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.upper-nav {
+  background-color: #d7cec7;
+}
+
 .logo {
   font-family: "Times New Roman", Times, serif;
   letter-spacing: 1px;
@@ -12,6 +16,15 @@
 
 .navbar-nav {
   gap: 20px;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #d7cec7;
 }
 
 .primary-text {
@@ -10793,6 +10806,22 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-img {
+  background-image: url("../assets/Hero.jpg");
+  width: 100px;
+  height: 100px;
+  background-position: center;
 }
 
 /*# sourceMappingURL=index.css.map */
