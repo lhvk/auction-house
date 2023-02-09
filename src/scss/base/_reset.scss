@@ -1,0 +1,21 @@
+@use "../utils/functions";
+
+html {
+  box-sizing: border-box;
+  // font-size: 62.5%; //REM NORMALIZE
+}
+
+body {
+  color: functions.getColor(text);
+  font-family: functions.getFont(primary);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
