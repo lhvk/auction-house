@@ -1,16 +1,26 @@
 @use "sass:meta";
 
-$ff-primary: "Roboto", sans-serif;
-$ff-secondary: "EB Garamond", serif;
+$primary: #d7cec7;
+$secondary: #76323f;
+$body: #222;
+$dark: #212120;
+$light-grey: #d3d3d3;
+$off-white: #f5f4f4;
+$light: #fff;
 
 $colors: (
-  "primary": #d7cec7,
-  "secondary": #76323f,
-  "text": #222,
-  "dark": #212120,
-  "light-grey": #d3d3d3,
-  "off-white": #f5f4f4,
+  "primary": $primary,
+  "secondary": $secondary,
+  "body": $body,
+  "dark": $dark,
+  "light-grey": $light-grey,
+  "off-white": $off-white,
 );
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+$ff-primary: "Roboto", sans-serif;
+$ff-secondary: "EB Garamond", serif;
 
 $fonts: (
   "primary": meta.inspect($ff-primary),

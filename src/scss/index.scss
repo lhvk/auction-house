@@ -1,24 +1,7 @@
-// @use "./utils/functions";
-// @use "./utils/variables";
-@use "./components/buttons";
+@use "./base/reset";
+@use "./base/typography";
 @use "./layout/header";
 @use "./layout/footer";
-@use "./base/typography";
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-img {
-  background-image: url("../assets/Hero.jpg");
-  width: 100px;
-  height: 100px;
-  background-position: center;
-}
+@use "./components/buttons";
+@use "./utils/variables";
+@use "./utils/functions";

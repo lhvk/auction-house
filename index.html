@@ -10,9 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/index.css" />
-    <script
-      defer
-      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
     <script defer type="module" src="src/js/index.js"></script>
     <title>Auction House | Home</title>
   </head>
@@ -20,13 +18,13 @@
     <header>
       <nav class="navbar upper-nav px-5">
         <div class="container-fluid justify-content-end">
-          <button class="btn btn-dark rounded-0">LOGIN</button>
+          <button class="btn btn-dark">login</button>
         </div>
       </nav>
 
       <nav class="navbar navbar-expand-lg px-5">
         <div class="container-fluid">
-          <a class="navbar-brand logo me-5" href="/index.html">AUCTION HOUSE</a>
+          <a class="navbar-brand logo me-5" href="/index.html">auction house</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -41,9 +39,9 @@
             class="collapse navbar-collapse justify-content-between"
             id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" href="#">HOME</a>
-              <a class="nav-link" href="#">AUCTIONS</a>
-              <a class="nav-link" href="#">ABOUT</a>
+              <a class="nav-link" href="#">home</a>
+              <a class="nav-link" href="#">auctions</a>
+              <a class="nav-link" href="#">about</a>
             </div>
             <form class="d-flex" role="search">
               <input
@@ -57,10 +55,35 @@
       </nav>
     </header>
     <main>
-      <section>
-        <div class="container-fluid"></div>
-        <div class="col"></div>
-        <div class="col hero-img"></div>
+      <section class="bg-dark">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img
+                src="/src/assets/Hero.jpg"
+                class="d-block mx-lg-auto img-fluid"
+                alt="Paintings"
+                loading="lazy" />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 lh-1 mb-3 text-light">
+                The grand opening Several lots on display.
+              </h1>
+              <p class="text-light">
+                Quickly design and customize responsive mobile-first sites with
+                Bootstrap, the world’s most popular front-end open source
+                toolkit, featuring Sass variables and mixins, responsive grid
+                system, extensive prebuilt components, and powerful JavaScript
+                plugins.
+              </p>
+              <div class="">
+                <button type="button" class="btn btn-secondary btn-lg">
+                  explore
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section></section>
     </main>

@@ -1,19 +1,22 @@
 @use "../utils/functions";
-@use "../utils/variables";
 
 .upper-nav {
   background-color: functions.getColor(primary);
 }
 
 .logo {
+  font-size: 16px;
   font-family: "Times New Roman", Times, serif;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  color: functions.getColor(text);
 }
 
 .nav-link {
-  font-family: functions.getFont(primary);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
+  text-transform: uppercase;
+  color: functions.getColor(text);
 }
 
 .navbar-nav {

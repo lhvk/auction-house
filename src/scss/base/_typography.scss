@@ -3,10 +3,11 @@
 
 .primary-text {
   font-family: functions.getFont(primary);
-  color: functions.getColor(text);
+  // color: functions.getColor(text);
 }
 
-.headings-text {
+h1,
+h2 {
   font-family: functions.getFont(secondary);
-  color: functions.getColor(text);
+  // color: functions.getColor(text);
 }
