@@ -1,21 +1,21 @@
 @use "../utils/functions";
+@use "../utils/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 html {
+  font-size: 62.5%; // REM Normalize
   box-sizing: border-box;
-  // font-size: 62.5%; //REM NORMALIZE
+  color: functions.getColor(text);
+  font-family: functions.getFont(primary);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: functions.getColor(text);
-  font-family: functions.getFont(primary);
-  font-size: 12px;
-  line-height: 1.5;
-  margin: 0;
+  font-size: 1.2rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-* {
-  box-sizing: border-box;
 }

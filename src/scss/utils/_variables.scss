@@ -1,5 +1,15 @@
 @use "sass:meta";
 
+$ff-primary: "Roboto", sans-serif;
+$ff-secondary: "Times New Roman", Times, serif;
+
+$fonts: (
+  "primary": meta.inspect($ff-primary),
+  "secondary": meta.inspect($ff-secondary),
+);
+
+$font-size-base: 1.2rem;
+
 $primary: #d7cec7;
 $secondary: #76323f;
 $body: #222;
@@ -15,14 +25,7 @@ $colors: (
   "dark": $dark,
   "light-grey": $light-grey,
   "off-white": $off-white,
+  "light": $light,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
-
-$ff-primary: "Roboto", sans-serif;
-$ff-secondary: "EB Garamond", serif;
-
-$fonts: (
-  "primary": meta.inspect($ff-primary),
-  "secondary": meta.inspect($ff-secondary),
-);
