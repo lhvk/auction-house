@@ -1,24 +1,10 @@
-// @use "./utils/functions";
-// @use "./utils/variables";
-@use "./components/buttons";
-@use "./layout/header";
 @use "./layout/footer";
+@use "./pages/home.scss";
+@use "./pages/register.scss";
+@use "./base/reset";
+@use "./layout/header";
 @use "./base/typography";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@use "./components/buttons";
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-img {
-  background-image: url("../assets/Hero.jpg");
-  width: 100px;
-  height: 100px;
-  background-position: center;
-}
+// @use "./utils/variables";
+// @use "./utils/functions";

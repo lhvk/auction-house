@@ -1,18 +1,31 @@
 @use "sass:meta";
 
 $ff-primary: "Roboto", sans-serif;
-$ff-secondary: "EB Garamond", serif;
-
-$colors: (
-  "primary": #d7cec7,
-  "secondary": #76323f,
-  "text": #222,
-  "dark": #212120,
-  "light-grey": #d3d3d3,
-  "off-white": #f5f4f4,
-);
+$ff-secondary: "Times New Roman", Times, serif;
 
 $fonts: (
   "primary": meta.inspect($ff-primary),
   "secondary": meta.inspect($ff-secondary),
 );
+
+$font-size-base: 1.2rem;
+
+$primary: #d7cec7;
+$secondary: #76323f;
+$body: #222;
+$dark: #212120;
+$light-grey: #d3d3d3;
+$off-white: #f5f4f4;
+$light: #fff;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "body": $body,
+  "dark": $dark,
+  "light-grey": $light-grey,
+  "off-white": $off-white,
+  "light": $light,
+);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";

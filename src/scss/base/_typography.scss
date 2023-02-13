@@ -1,12 +1,20 @@
 @use "../utils/variables";
 @use "../utils/functions";
 
-.primary-text {
-  font-family: functions.getFont(primary);
-  color: functions.getColor(text);
+h1,
+h2,
+h3 {
+  font-family: functions.getFont(secondary);
 }
 
-.headings-text {
-  font-family: functions.getFont(secondary);
-  color: functions.getColor(text);
+.search-bar {
+  font-size: 1.6rem;
+}
+
+// Vertical line
+
+.vl {
+  border-left: 1px solid functions.getColor(light-grey);
+  height: 450px;
+  margin: 0 20px;
 }
