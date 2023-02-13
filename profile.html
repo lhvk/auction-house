@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/index.css" />
+    <script
+      defer
+      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer type="module" src="src/js/index.js"></script>
+    <title>Auction House | Profile</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar upper-nav px-5">
+        <div class="container-fluid justify-content-end">
+          <button
+            class="btn btn-lg btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#login">
+            logout
+          </button>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg px-5 py-4">
+        <div class="container-fluid">
+          <a class="navbar-brand logo me-5" href="/index.html">auction house</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="#">home</a>
+              <a class="nav-link" href="#">auctions</a>
+              <a class="nav-link" href="#">about</a>
+            </div>
+            <form class="d-flex" role="search">
+              <input
+                class="search-bar form-control rounded-0"
+                type="search"
+                placeholder="Search"
+                aria-label="Search" />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img
+                src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2970&q=80"
+                class="d-block mx-lg-auto img-fluid"
+                height="800"
+                width="800"
+                alt="Bootstrap Themes"
+                loading="lazy" />
+              <button class="d-flex p-0 border-0 bg-white mt-1">
+                <img src="/src/assets/icons/pencil-square.svg" class="me-2" />
+                <p class="mb-0">Edit avatar</p>
+              </button>
+            </div>
+            <div class="col-lg-6">
+              <h1 class="fs-2 m-0 lh-1 text-secondary text-uppercase">
+                john archibald rotschild III
+              </h1>
+              <p class="text-muted fs-4">archrots@child.com</p>
+              <hr />
+              <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-start"> -->
+              <div class="list-group">
+                <button
+                  class="btn btn-outline-primary d-flex justify-content-between border-0 text-body rounded-0 px-3 py-3 fs-4">
+                  Active bids <span>14</span>
+                </button>
+                <button
+                  class="btn btn-outline-primary d-flex justify-content-between border-0 text-body rounded-0 px-3 py-3 fs-4">
+                  Active listings
+                  <span>2</span>
+                </button>
+
+                <p
+                  class="d-flex justify-content-between text-body rounded-0 px-3 py-3 fs-4">
+                  Credits
+                  <span>1</span>
+                </p>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><p class="p-2">Auction House 2023 &copy;</p></footer>
+  </body>
+</html>
