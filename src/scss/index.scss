@@ -1,10 +1,5 @@
-@use "./layout/footer";
-@use "./pages/home.scss";
-@use "./pages/register.scss";
-@use "./base/reset";
-@use "./layout/header";
-@use "./base/typography";
-@use "./components/buttons";
-
-// @use "./utils/variables";
-// @use "./utils/functions";
+@use "./utils";
+@use "./pages";
+@use "./base";
+@use "./components";
+@use "./layout";

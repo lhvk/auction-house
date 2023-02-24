@@ -1,0 +1,55 @@
+@use "sass:meta";
+
+// FUNCTIONS
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}
+
+@function getFont($font) {
+  @return map-get($fonts, $font);
+}
+
+// VARIABLES
+
+// font
+
+$ff-primary: "Roboto", sans-serif, serif;
+$ff-secondary: "Playfair Display", Times, serif;
+$ff-brand: "Times New Roman", Times, serif;
+
+$fonts: (
+  "primary": meta.inspect($ff-primary),
+  "secondary": meta.inspect($ff-secondary),
+  "brand": meta.inspect($ff-brand),
+);
+
+$font-size-base: 1.2rem;
+
+//colors
+
+$primary: #d7cec7;
+$secondary: #76323f;
+$body: #222;
+$dark: #212120;
+$light-grey: #d3d3d3;
+$off-white: #f5f4f4;
+$light: #fff;
+$disabled: #595959;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "body": $body,
+  "dark": $dark,
+  "light-grey": $light-grey,
+  "off-white": $off-white,
+  "light": $light,
+  "disabled": $disabled,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.bg-off-white {
+  background-color: getColor(off-white);
+}
