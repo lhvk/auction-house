@@ -1,0 +1,61 @@
+@use "./utils" as function;
+
+// BUTTONS
+
+.btn-secondary,
+.btn-primary,
+.btn-dark,
+.btn-outline-light,
+.btn-lg {
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.btn-profile {
+  color: function.getColor(body);
+  background-color: inherit;
+  font-size: 1.3rem;
+  border-radius: 0;
+  border: 0;
+
+  &:hover {
+    color: function.getColor(light);
+    background-color: function.getColor(secondary);
+    & .number {
+      color: #fff;
+    }
+  }
+}
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+.btn-outline-light {
+  @include button-variant(
+    function.getColor(light),
+    function.getColor(light-grey),
+    function.getColor(dark),
+    function.getColor(light),
+    null,
+    null,
+    null,
+    null,
+    null,
+    function.getColor(light-grey),
+    function.getColor(light-grey),
+    function.getColor(disabled)
+  );
+}
+
+.btn-dark {
+  @include button-variant(
+    #222,
+    #222,
+    $disabled-background: function.getColor(light-grey),
+    $disabled-border: function.getColor(light-grey),
+    $disabled-color: function.getColor(disabled)
+  );
+}

@@ -1,0 +1,105 @@
+@use "./utils" as function;
+
+// HEADER
+
+.brand {
+  font-size: 2rem;
+  font-family: function.getFont(brand);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: function.getColor(body);
+}
+
+.nav-link-active,
+.nav-link:hover {
+  text-decoration: underline 4px;
+  text-underline-offset: 24px;
+  @media (max-width: 992px) {
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  [data-visible="loggedIn"] {
+    display: none;
+  }
+
+  [data-visible="loggedOut"] {
+    display: initial;
+  }
+
+  &.logged-in {
+    [data-visible="loggedIn"] {
+      display: initial;
+    }
+    [data-visible="loggedOut"] {
+      display: none;
+    }
+  }
+}
+
+// SECTION
+
+.section-header {
+  height: 40px;
+  border-top: solid 1px function.getColor(light-grey);
+  border-bottom: solid 1px function.getColor(light-grey);
+  display: flex;
+  align-items: center;
+
+  & h1 {
+    color: function.getColor(secondary);
+    font-family: function.getFont(primary);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin: 0;
+  }
+}
+
+// LISTINGS CARD
+
+.card {
+  max-width: 500px;
+  &:hover {
+    & .card-image {
+      transform: scale(1.2);
+    }
+    & .card-title {
+      text-decoration: underline;
+      font-size: 2.5rem;
+    }
+    & .card-text {
+      color: function.getColor(body);
+    }
+    & button {
+      border-color: function.getColor(body);
+    }
+  }
+  & .card-image {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+  }
+  & .card-title {
+    line-height: 25px;
+    transition: all 0.3s ease-in-out;
+  }
+  & .card-text {
+    color: function.getColor(disabled);
+  }
+}
+
+// SINGLE LISTING CARD
+
+// FOOTER
+
+footer {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: function.getColor(primary);
+}
