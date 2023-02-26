@@ -4,7 +4,6 @@ import { load } from "../../handlers/storage.mjs";
 
 const action = "/profiles";
 const method = "put";
-const modal = bootstrap.Modal.getOrCreateInstance("#updateAvatarModal");
 
 export async function updateAvatar(avatar) {
   const { name } = load("profile");
@@ -18,7 +17,6 @@ export async function updateAvatar(avatar) {
 
   if (response.ok) {
     alert(`Avatar successfully updated`);
-    modal.hide();
     await response.json();
     location.reload();
   } else {
