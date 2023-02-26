@@ -1,4 +1,4 @@
-import { load } from "../../handlers/storage.mjs";
+import { load } from "../handlers/storage.mjs";
 
 export function renderLogin() {
   const token = load("token");

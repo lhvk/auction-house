@@ -23,9 +23,7 @@ export async function registerUser(profile) {
     alert(`User successfully created. You can now log in`);
     window.location.replace("/index.html");
   } else {
-    result.errors.forEach((x) =>
-      alert(`Failed to register user: ${x.message}`)
-    );
+    result.errors.forEach((x) => alert(`Failed to register user: ${x.message}`));
   }
   return result;
 }

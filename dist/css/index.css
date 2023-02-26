@@ -10876,6 +10876,12 @@ textarea.form-control-lg {
   font-family: "Roboto", sans-serif, serif;
 }
 
+.profile-img {
+  max-width: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+
 .number {
   color: #76323f;
   font-weight: 700;

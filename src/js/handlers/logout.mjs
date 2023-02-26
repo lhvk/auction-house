@@ -1,5 +1,5 @@
 import { logout } from "../api/auth/logout.mjs";
-import { renderLogin } from "../api/ui/render.mjs";
+import { renderLogin } from "../ui/render.mjs";
 
 export function setLogoutListener() {
   document.querySelector("#logoutBtn").addEventListener("click", (event) => {

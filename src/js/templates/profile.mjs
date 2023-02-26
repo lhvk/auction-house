@@ -7,10 +7,9 @@ export function profileTemplate(profileData) {
                 onerror="this.onerror=null; 
                 this.src='/src/assets/rubiks.png'"
                 class="img-fluid"
-                style="object-fit: contain"
-                alt="Bootstrap Themes"
+                alt="Profile image for ${profileData.name}"
                 loading="lazy" />
-            <button class="d-flex p-0 border-0 bg-off-white mt-1">
+            <button class="d-flex p-0 border-0 bg-off-white mt-1" data-bs-toggle="modal" data-bs-target="#updateAvatarModal">
                 <img src="/src/assets/icons/pencil-square.svg" class="me-2" />
                 <p class="mb-0">Edit avatar</p>
             </button>

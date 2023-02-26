@@ -67,6 +67,12 @@
 
 // PROFILE
 
+.profile-img {
+  max-width: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+
 .number {
   color: function.getColor(secondary);
   font-weight: 700;

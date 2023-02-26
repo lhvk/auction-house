@@ -1,6 +1,6 @@
 import { API_HOST_URL } from "../constants.mjs";
 import * as storage from "../../handlers/storage.mjs";
-import { renderLogin } from "../ui/render.mjs";
+import { renderLogin } from "../../ui/render.mjs";
 
 const action = "/auth/login";
 const method = "post";

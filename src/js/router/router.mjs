@@ -6,6 +6,8 @@ import * as template from "../templates/index.mjs";
 import { goBack } from "../handlers/redirect.mjs";
 import { load } from "../handlers/storage.mjs";
 import { setLogoutListener } from "../handlers/logout.mjs";
+import { getProfile } from "../api/profile/profile.mjs";
+import { setUpdateAvatarListener } from "../handlers/update.mjs";
 
 async function allListingsPage() {
   const listings = await listing.getListings();
@@ -20,10 +22,11 @@ async function singleListingPage() {
   template.renderListingTemplate(singleListing, listingContainer);
 }
 
-function profilePage() {
-  const getProfile = load("profile");
+async function profilePage() {
+  const profile = load("profile");
+  const profileData = await getProfile(profile.name);
   const profileContainer = document.querySelector("#profileContainer");
-  template.renderProfileTemplate(getProfile, profileContainer);
+  template.renderProfileTemplate(profileData, profileContainer);
 }
 
 export default function router() {
@@ -51,6 +54,7 @@ export default function router() {
     case "/profile.html":
       setLogoutListener();
       profilePage();
+      setUpdateAvatarListener();
       return;
   }
 }
