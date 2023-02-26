@@ -10,9 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/index.css" />
-    <script
-      defer
-      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer type="module" src="src/js/index.js"></script>
     <title>Auction House | Profile</title>
   </head>
@@ -26,9 +24,7 @@
 
       <nav class="navbar navbar-expand-lg px-5 py-4">
         <div class="container-fluid">
-          <a class="navbar-brand brand me-5" href="/index.html"
-            >auction house</a
-          >
+          <a class="navbar-brand brand me-5" href="/index.html">auction house</a>
           <button
             class="navbar-toggler border-0 p-0"
             type="button"
@@ -39,20 +35,14 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0"
-            id="navbarNavAltMarkup">
+          <div class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0" id="navbarNavAltMarkup">
             <div class="navbar-nav gap-4">
               <a class="nav-link text-body text-uppercase" href="#">home</a>
               <a class="nav-link text-body text-uppercase" href="#">auctions</a>
               <a class="nav-link text-body text-uppercase" href="#">about</a>
             </div>
             <form class="d-flex py-5 py-lg-0" role="search">
-              <input
-                class="form-control rounded-0 fs-5"
-                type="search"
-                placeholder="Search"
-                aria-label="Search" />
+              <input class="form-control rounded-0 fs-5" type="search" placeholder="Search" aria-label="Search" />
             </form>
           </div>
         </div>
@@ -66,8 +56,37 @@
             <h1 class="ps-2">user profile</h1>
           </div>
         </div>
+
         <!-- User Profile -->
         <div id="profileContainer" class="container px-4 py-5"></div>
+        <!-- User Profile End -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="updateAvatarModal" tabindex="-1" aria-labelledby="avatarModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="avatarModalLabel">Update avatar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="updateAvatar">
+                  <input
+                    name="avatar"
+                    aria-label="Upload an url of an image for your avatar"
+                    class="form-control border-dark p-3 mb-3 fs-5"
+                    type="url"
+                    placeholder="URL" />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                <button id="updateBtn" class="btn btn-dark" type="submit" form="updateAvatar">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal End -->
       </section>
     </main>
 
