@@ -31,6 +31,7 @@ export default function router() {
       handler.setLogoutListener();
       renderProfileButtonTemplate();
       page.listingPage();
+      handler.setBidOnListingFormListener();
       return;
     case "/profile.html":
       handler.setLogoutListener();

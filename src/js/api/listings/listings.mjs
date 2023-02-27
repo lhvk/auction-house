@@ -1,14 +1,14 @@
 import { API_HOST_URL } from "../constants.mjs";
 import { useFetch } from "../fetch.mjs";
 
-const action = "/listings";
+const action = "/listings/";
 const bids = "?_bids=true";
 const desc = "?sort=created&sortOrder=desc";
 const active = "?_active=true";
 
 // SINGLE LISTING
 export async function getListing(id) {
-  const getListingURL = `${API_HOST_URL}${action}/${id}${bids}`;
+  const getListingURL = `${API_HOST_URL}${action}${id}${bids}`;
 
   if (!id) {
     throw new Error("Get request requires an id");
