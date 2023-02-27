@@ -6,6 +6,10 @@ const method = "post";
 
 export async function createListing(listingData) {
   const url = API_HOST_URL + action;
+  const modal = bootstrap.Modal.getOrCreateInstance("#createListingModal");
+
+  listingData.tags = listingData.tags.split(",").map((tag) => tag.trim());
+  if (listingData.media !== "") listingData.media = listingData.media.split(",").map((media) => media.trim());
 
   const response = await authFetch(url, {
     method,
@@ -13,11 +17,12 @@ export async function createListing(listingData) {
   });
 
   const result = await response.json();
-  console.log(result);
+
   if (response.ok) {
     alert(`Listing successfully created!`);
-    return result;
+    modal.hide();
   } else {
     result.errors.forEach((x) => alert(`Failed to create new listing: ${x.message}`));
   }
+  return result;
 }

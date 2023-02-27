@@ -9,6 +9,7 @@ import { setLogoutListener } from "../handlers/logout.mjs";
 import { getProfile } from "../api/profile/profile.mjs";
 import { setUpdateAvatarListener } from "../handlers/update.mjs";
 import { setCreateListingFormListener } from "../handlers/create.mjs";
+import { renderLogin } from "../ui/render.mjs";
 
 async function allListingsPage() {
   const listings = await listing.getListings();
@@ -38,16 +39,19 @@ export default function router() {
       setRegisterFormListener();
       return;
     case "/index.html":
+      renderLogin();
       setLoginFormListener();
       setLogoutListener();
       return;
     case "/listings.html":
+      renderLogin();
       setLoginFormListener();
       setLogoutListener();
       allListingsPage();
       setCreateListingFormListener();
       return;
     case "/listing.html":
+      renderLogin();
       goBack();
       setLoginFormListener();
       setLogoutListener();
