@@ -8,6 +8,7 @@ import { load } from "../handlers/storage.mjs";
 import { setLogoutListener } from "../handlers/logout.mjs";
 import { getProfile } from "../api/profile/profile.mjs";
 import { setUpdateAvatarListener } from "../handlers/update.mjs";
+import { setCreateListingFormListener } from "../handlers/create.mjs";
 
 async function allListingsPage() {
   const listings = await listing.getListings();
@@ -44,6 +45,7 @@ export default function router() {
       setLoginFormListener();
       setLogoutListener();
       allListingsPage();
+      setCreateListingFormListener();
       return;
     case "/listing.html":
       goBack();

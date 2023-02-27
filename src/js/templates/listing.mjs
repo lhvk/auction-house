@@ -1,7 +1,6 @@
-import { totalAmount, formatDates } from "../controllers/formatDate.mjs";
+import { formatDate, totalAmount } from "../controllers/formatDate.mjs";
 
 export function listingsTemplate(listingData) {
-  console.log(listingData);
   return ` 
 <a href="/listing.html?id=${listingData.id}" class="card p-5 mb-5 border-0">
     <div class="overflow-hidden">
@@ -15,8 +14,8 @@ export function listingsTemplate(listingData) {
 
     <div class="card-body p-0 mt-3">
         <h3 class="card-title mb-5 text-capitalize">${listingData.title}</h3>
-        <p class="card-text m-0">Bid is now</p>
-        <p class="card-text fw-bold">${listingData.bids}</p>
+        <p class="card-text m-0">Created</p>
+        <p class="card-text fw-bold">${formatDate(new Date(listingData.created))}</p>
         <div class="d-grid gap-2">
             <button href="/listing.html?id=${listingData.id}" class="btn btn-outline-light">view</button>
         </div>
@@ -56,7 +55,7 @@ export function listingTemplate(listingData) {
             Bids <span class="fw-bold">${listingData._count.bids}</span>
           </p>
           <p class="fw-light m-0">
-            Ends <span class="fw-bold">${formatDates(listingData.endsAt)}</span>
+            Ends <span class="fw-bold">${listingData.endsAt}</span>
               </p>
       </div>
 
@@ -75,8 +74,5 @@ export function renderListingTemplate(listing, parent) {
 
 // MULTIPLE LISTINGS
 export function renderListingsTemplate(listings, parent) {
-  parent.insertAdjacentHTML(
-    "beforeend",
-    listings.map(listingsTemplate).join("")
-  );
+  parent.insertAdjacentHTML("beforeend", listings.map(listingsTemplate).join(""));
 }
