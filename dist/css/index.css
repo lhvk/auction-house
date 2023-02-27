@@ -11001,16 +11001,16 @@ a:hover {
   }
 }
 
-.navbar [data-visible=loggedIn] {
+body [data-visible=loggedIn] {
   display: none;
 }
-.navbar [data-visible=loggedOut] {
+body [data-visible=loggedOut] {
   display: initial;
 }
-.navbar.logged-in [data-visible=loggedIn] {
+body.logged-in [data-visible=loggedIn] {
   display: initial;
 }
-.navbar.logged-in [data-visible=loggedOut] {
+body.logged-in [data-visible=loggedOut] {
   display: none;
 }
 
