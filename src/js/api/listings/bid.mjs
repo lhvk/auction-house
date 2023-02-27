@@ -9,7 +9,6 @@ const method = "post";
 export async function bidOnListing(bid) {
   const { id } = getSearchParams();
   const url = `${API_HOST_URL}${action}${id}${bids}`;
-  const modal = bootstrap.Modal.getOrCreateInstance("#createListingModal");
 
   bid.amount = Number(bid.amount);
 
@@ -22,7 +21,7 @@ export async function bidOnListing(bid) {
 
   if (response.ok) {
     alert(`Your bid was registered. Thank you for bidding`);
-    modal.hide();
+    location.reload();
   } else {
     result.errors.forEach((x) => alert(`Failed to register bid: ${x.message}`));
   }
