@@ -5,7 +5,7 @@ export function setLogoutListener() {
   document.querySelector("#logoutBtn").addEventListener("click", (event) => {
     event.preventDefault();
     logout();
-    alert("Your now logged out");
+    alert("You're now logged out");
     renderLogin();
   });
 }

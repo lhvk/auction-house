@@ -59,7 +59,7 @@
       </nav>
     </header>
 
-    <!-- Login modal -->
+    <!-- Login Modal -->
     <div class="modal" id="loginModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -95,7 +95,7 @@
         </div>
       </div>
     </div>
-    <!-- Login modal end -->
+    <!-- Login Modal End -->
 
     <main>
       <section class="bg-off-white">
@@ -105,9 +105,39 @@
             <span class="text-uppercase">go back</span>
           </button>
           <h1>item no 12312</h1>
+          <!-- TODO: HUSK Å SENDE INN NAVN PÅ LISTING -->
         </div>
 
         <div id="listingContainer" class="container px-4 py-5"></div>
+
+        <!-- Make Bid Modal -->
+        <div class="modal fade" id="makeBidModal" tabindex="-1" aria-labelledby="makeBidModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0">
+                <button type="button" class="btn-close pt-3 px-3" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body px-5 pb-5">
+                <h2 class="text-center fs-4 mb-3">Bid on listing</h2>
+                <form id="makeBidForm" method="post">
+                  <input
+                    name="amount"
+                    aria-label="Make your bid"
+                    class="form-control border-dark p-3 mb-3 fs-5"
+                    type="number"
+                    placeholder="Bid amount"
+                    maxlength="4"
+                    required />
+                </form>
+              </div>
+              <div class="modal-footer px-5 py-4">
+                <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-lg btn-dark" type="submit" form="makeBidForm">Bid</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Make Bid Modal End -->
       </section>
     </main>
     <footer class="mt-auto">

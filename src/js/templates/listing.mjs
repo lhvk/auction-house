@@ -9,7 +9,7 @@ export function listingTemplate(listingData) {
     <img
       src="${listingData.media}"
       onerror="this.onerror=null; 
-        this.src='/src/assets/rubiks.png'"
+          this.src='/src/assets/rubiks.png'"
       class="img-fluid"
       alt="Image of the listing for sale" />
   </div>
@@ -29,7 +29,9 @@ export function listingTemplate(listingData) {
         <p class="fw-light m-0">Ends <span class="fw-bold">${listingData.endsAt}</span></p>
       </div>
 
-      <button class="btn btn-lg py-3 w-100 btn-secondary" data-visible="loggedIn">make a bid</button>
+      <button class="btn btn-lg py-3 w-100 btn-secondary" data-visible="loggedIn" data-bs-toggle="modal" data-bs-target="#makeBidModal">
+        make a bid
+      </button>
       <button class="btn btn-lg py-3 w-100 btn-secondary" data-visible="loggedOut" data-bs-toggle="modal" data-bs-target="#loginModal">
         login to make a bid
       </button>
