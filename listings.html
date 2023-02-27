@@ -98,7 +98,81 @@
     <main>
       <section>
         <div class="container-fluid">
-          <h1 class="text-left ps-5 mt-5">Browse all listings</h1>
+          <div id="sectionHeaderListings" class="d-flex justify-content-between px-5 mt-5">
+            <h1 class="text-left">Browse all listings</h1>
+            <button
+              class="btn-outline-light btn border-0 text-secondary px-4 d-flex align-items-center"
+              data-bs-toggle="modal"
+              data-bs-target="#createListingModal">
+              <img src="/src/assets/icons/plus-circle.svg" class="me-2" /> Add new listing
+            </button>
+          </div>
+
+          <!-- New listing modal -->
+          <div class="modal fade" id="createListingModal" tabindex="-1" aria-labelledby="createListingTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header border-0">
+                  <button type="button" class="btn-close pt-3 px-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-5 pb-5">
+                  <h2 class="text-center fs-4 mb-3">Create listing</h2>
+                  <form id="createListingForm" class="d-flex flex-column gap-3">
+                    <!-- title -->
+                    <input
+                      name="title"
+                      title="Listing title"
+                      aria-label="Listing title"
+                      class="form-control border-dark p-4 fs-5"
+                      type="text"
+                      placeholder="Title"
+                      maxlength="50"
+                      required />
+                    <!-- description -->
+                    <textarea
+                      name="description"
+                      title="Description of the listing"
+                      aria-label="Describe your listing"
+                      class="form-control border-dark p-4 fs-5"
+                      type="text"
+                      placeholder="Description (Optional)"
+                      maxlength="300"></textarea>
+                    <!-- end date -->
+                    <input
+                      name="endsAt"
+                      title="Listing must have an end date"
+                      aria-label="Listing end date"
+                      class="form-control border-dark p-4 fs-5"
+                      type="datetime-local"
+                      placeholder="End date"
+                      required />
+                    <!-- tags -->
+                    <input
+                      name="tags"
+                      title="Multiple tags must be seperated by a comma"
+                      aria-label="Tags for the listing"
+                      class="form-control border-dark p-4 fs-5"
+                      type="text"
+                      placeholder="Tags (Optional)"
+                      maxlength="100" />
+                    <!-- media -->
+                    <input
+                      name="media"
+                      title="Media must be an url. You can add multiple by seperating them with a comma"
+                      aria-label="Media for the listing"
+                      class="form-control border-dark p-4 fs-5"
+                      type="url"
+                      placeholder="Media (Optional)" />
+                  </form>
+                </div>
+                <div class="modal-footer px-5 py-4">
+                  <button type="reset" class="btn btn-lg btn-outline-light" form="createListingForm" data-bs-dismiss="modal">Cancel</button>
+                  <button class="btn btn-lg btn-dark" type="submit" form="createListingForm">Create</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- New listing modal end -->
 
           <div id="listingsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 justify-content-center">
             <!-- Listings goes here -->
