@@ -6,3 +6,4 @@ export * from "./storage.mjs";
 export * from "./update.mjs";
 export * from "./create.mjs";
 export * from "./bid.mjs";
+export * from "./media.mjs";

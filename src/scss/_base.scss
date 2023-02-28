@@ -22,13 +22,31 @@ body {
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
+
+  [data-visible="loggedIn"] {
+    display: none;
+  }
+
+  [data-visible="loggedOut"] {
+    display: initial;
+  }
+
+  &.logged-in {
+    [data-visible="loggedIn"] {
+      display: initial;
+    }
+    [data-visible="loggedOut"] {
+      display: none;
+    }
+  }
 }
 
 // TYPOGRAPHY
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: function.getFont(secondary);
 }
 
