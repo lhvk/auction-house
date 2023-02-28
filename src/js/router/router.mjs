@@ -15,6 +15,7 @@ export default function router() {
       handler.setLoginFormListener();
       handler.setLogoutListener();
       renderProfileButtonTemplate();
+      page.listingsCarousel();
       return;
     case "/listings.html":
       renderLogin();

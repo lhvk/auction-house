@@ -8,13 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/index.css" />
-    <script
-      defer
-      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer type="module" src="src/js/index.js"></script>
     <title>Auction House | Home</title>
   </head>
@@ -29,26 +25,16 @@
             data-bs-toggle="modal"
             data-bs-target="#loginModal"
             data-auth="login"
-            data-visible="loggedOut"
-          >
+            data-visible="loggedOut">
             login
           </button>
-          <button
-            id="logoutBtn"
-            class="btn btn-lg btn-dark"
-            data-auth="logout"
-            data-visible="loggedIn"
-          >
-            logout
-          </button>
+          <button id="logoutBtn" class="btn btn-lg btn-dark" data-auth="logout" data-visible="loggedIn">logout</button>
         </div>
       </nav>
 
       <nav class="navbar navbar-expand-lg px-5 py-4">
         <div class="container-fluid">
-          <a class="navbar-brand brand me-5" href="/index.html"
-            >auction house</a
-          >
+          <a class="navbar-brand brand me-5" href="/index.html">auction house</a>
           <button
             class="navbar-toggler border-0 p-0"
             type="button"
@@ -56,34 +42,17 @@
             data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0"
-            id="navbarNavAltMarkup"
-          >
+          <div class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0" id="navbarNavAltMarkup">
             <div class="navbar-nav gap-4">
-              <a
-                class="nav-link text-body text-uppercase nav-link-active"
-                href="./index.html"
-                >home</a
-              >
-              <a class="nav-link text-body text-uppercase" href="/listings.html"
-                >auctions</a
-              >
-              <a class="nav-link text-body text-uppercase" href="./about.html"
-                >about</a
-              >
+              <a class="nav-link text-body text-uppercase nav-link-active" href="./index.html">home</a>
+              <a class="nav-link text-body text-uppercase" href="/listings.html">auctions</a>
+              <a class="nav-link text-body text-uppercase" href="./about.html">about</a>
             </div>
             <form class="d-flex py-5 py-lg-0" role="search">
-              <input
-                class="form-control rounded-0 fs-5"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
+              <input class="form-control rounded-0 fs-5" type="search" placeholder="Search" aria-label="Search" />
             </form>
           </div>
         </div>
@@ -95,17 +64,10 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn-close pt-3 px-3"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close pt-3 px-3" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body border-0 px-5 pb-5">
-            <h2 class="text-center fs-4 mb-3">
-              Login to register lots and place bids
-            </h2>
+            <h2 class="text-center fs-4 mb-3">Login to register lots and place bids</h2>
             <form class="d-flex flex-column mb-5" id="loginForm" method="post">
               <input
                 name="email"
@@ -114,8 +76,7 @@
                 class="form-control p-4 border-dark mb-3"
                 type="email"
                 placeholder="EMAIL"
-                required
-              />
+                required />
               <input
                 name="password"
                 aria-label="Input your password"
@@ -124,23 +85,11 @@
                 type="password"
                 placeholder="PASSWORD"
                 autocomplete="on"
-                required
-              />
+                required />
             </form>
             <div class="d-flex flex-column">
-              <button
-                class="btn btn-outline-light p-3 mb-3"
-                form="loginForm"
-                type="submit"
-              >
-                login
-              </button>
-              <a
-                class="btn btn-outline-light p-3"
-                role="button"
-                href="/register.html"
-                >register user
-              </a>
+              <button class="btn btn-outline-light p-3 mb-3" form="loginForm" type="submit">login</button>
+              <a class="btn btn-outline-light p-3" role="button" href="/register.html">register user </a>
             </div>
           </div>
         </div>
@@ -156,35 +105,19 @@
               <div class="col-lg-8 order-lg-2 pr-0">
                 <div class="h-100 hero-image-container">
                   <div class="hero-image-wrapper">
-                    <img
-                      src="/src/assets/hero.jpg"
-                      alt=""
-                      class="hero-image mw-100"
-                    />
+                    <img src="/src/assets/hero.jpg" alt="" class="hero-image mw-100" />
                   </div>
                 </div>
               </div>
               <div class="col-lg-4">
-                <div
-                  class="d-flex flex-column justify-content-end h-100 pt-3 pb-5 ps-xxl-5 hero-content"
-                >
+                <div class="d-flex flex-column justify-content-end h-100 pt-3 pb-5 ps-xxl-5 hero-content">
                   <div class="ps-xl-5">
-                    <span class="text-light text-uppercase">
-                      it's now possible to make bids
-                    </span>
-                    <h1 class="mb-2 mt-3 text-light">
-                      The Grand Auction is now live
-                    </h1>
-                    <span class="text-light sub-text-hero mt-4">
-                      &ldquo;A great collection of items from the modern
-                      era&rdquo;
-                    </span>
+                    <span class="text-light text-uppercase"> it's now possible to make bids </span>
+                    <h1 class="mb-2 mt-3 text-light">The Grand Auction is now live</h1>
+                    <span class="text-light sub-text-hero mt-4"> &ldquo;A great collection of items from the modern era&rdquo; </span>
                     <ul class="text-light text-uppercase d-flex mt-4 p-0">
                       <li class="d-flex me-5">
-                        <img
-                          src="/src/assets/icons/calendar4.svg"
-                          class="me-3"
-                        />
+                        <img src="/src/assets/icons/calendar4.svg" class="me-3" />
                         <p class="mb-0">1 feb - 31 march</p>
                       </li>
                       <li class="d-flex">
@@ -193,12 +126,7 @@
                       </li>
                     </ul>
                     <div class="mt-5">
-                      <a
-                        href="/listings.html"
-                        class="btn btn-hero btn-secondary btn-lg py-3 px-5"
-                      >
-                        explore
-                      </a>
+                      <a href="/listings.html" class="btn btn-hero btn-secondary btn-lg py-3 px-5"> explore </a>
                     </div>
                   </div>
                 </div>
@@ -209,237 +137,58 @@
       </section>
 
       <section class="my-5">
-        <div class="carousel slide" id="carouselExampleIndicators">
+        <!-- Carousel Section -->
+
+        <div id="listingsCarousel" class="carousel slide">
           <div class="carousel-inner">
+            <!-- Carousel Pages -->
             <div class="carousel-item active">
-              <div class="container">
-                <div class="row row-cols-lg-3">
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="d-flex">
+                <div id="slide-1"></div>
+                <div id="slide-2"></div>
+                <div id="slide-3"></div>
               </div>
             </div>
             <div class="carousel-item">
-              <div class="container">
-                <div class="row row-cols-lg-3">
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="d-flex">
+                <div id="slide-4"></div>
+                <div id="slide-5"></div>
+                <div id="slide-6"></div>
               </div>
             </div>
             <div class="carousel-item">
-              <div class="container">
-                <div class="row row-cols-lg-3">
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card p-5 border-0 col">
-                    <img
-                      src="https://images.unsplash.com/photo-1586173806725-797f4d632f5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2094&q=80"
-                      class="card-img-top mb-5"
-                      alt="..."
-                    />
-                    <div class="card-body p-0">
-                      <h3 class="card-title mb-5">Lot for sale</h3>
-                      <p class="card-text m-0 text-muted">Bid is now</p>
-                      <p class="fw-bold text-muted">100 NOK</p>
-                      <div class="d-grid gap-2">
-                        <button href="#" class="btn btn-outline-light">
-                          view
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="d-flex">
+                <div id="slide-7"></div>
+                <div id="slide-8"></div>
+                <div id="slide-9"></div>
               </div>
             </div>
+            <!-- Carousel Pages End -->
           </div>
-        </div>
-        <div class="d-flex justify-content-between">
-          <button
-            class="carousel-control-prev position-relative"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span
-              class="carousel-control-prev-icon bg-dark"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <div class="carousel-indicators bg-dark position-relative m-0">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
+          <!-- Previous Button -->
+          <div class="d-flex justify-content-evenly">
+            <button class="" type="button" data-bs-target="#listingsCarousel" data-bs-slide="prev">previous</button>
+            <!-- Previous Button End -->
+            <!-- Indicators -->
+            <div>
+              <button
+                type="button"
+                data-bs-target="#listingsCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#listingsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#listingsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <!-- Indicators End -->
+            <!-- Next Button -->
+            <button class="" type="button" data-bs-target="#listingsCarousel" data-bs-slide="next">next</button>
+            <!-- Next Button End -->
           </div>
-          <button
-            class="carousel-control-next position-relative"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-control-next-icon bg-dark"
-              aria-hidden="true"
-            ></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
 
-        <!-- Carousel section -->
+        <!-- Carousel Section End -->
       </section>
     </main>
     <footer class="mt-auto">
