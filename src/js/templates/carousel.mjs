@@ -5,7 +5,7 @@ export function carouselTemplate(listingData) {
   class="carousel slide container-fluid p-0 mb-4 gap-5 d-flex flex-column-reverse flex-lg-row"
 >
   <!-- Carousel Indicators -->
-  <div class="d-flex gap-4 flex-lg-column justify-content-center">
+  <div class="d-flex gap-4 flex-lg-column justify-content-center justify-content-md-start">
     <!-- Thumnail 0 -->
     <div
       class="thumb-container"
