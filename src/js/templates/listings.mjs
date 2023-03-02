@@ -22,6 +22,9 @@ export function listingsTemplate(listingData) {
       <p class="card-text fw-bold">${formatDate(
         new Date(listingData.created)
       )}</p>
+      
+  <div class="mb-2">${listingData.tags}</div>
+        
       <div class="d-grid gap-2">
         <button href="/listing.html?id=${
           listingData.id
