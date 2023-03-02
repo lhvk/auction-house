@@ -48,7 +48,7 @@
     }
     & .card-title {
       text-decoration: underline;
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
     & .card-text {
       color: function.getColor(body);
@@ -67,6 +67,9 @@
   & .card-title {
     line-height: 25px;
     transition: all 0.3s ease-in-out;
+  }
+  & .card-body {
+    height: 170px;
   }
   & .card-text {
     color: function.getColor(disabled);
