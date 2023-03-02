@@ -11038,7 +11038,7 @@ a:hover {
 }
 .listings-card:hover .card-title {
   text-decoration: underline;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 .listings-card:hover .card-text {
   color: #222;
@@ -11055,6 +11055,9 @@ a:hover {
 .listings-card .card-title {
   line-height: 25px;
   transition: all 0.3s ease-in-out;
+}
+.listings-card .card-body {
+  height: 170px;
 }
 .listings-card .card-text {
   color: #595959;
