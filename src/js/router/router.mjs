@@ -35,6 +35,7 @@ export default function router() {
       handler.setBidOnListingFormListener();
       return;
     case "/profile.html":
+      handler.goBack();
       handler.setLogoutListener();
       page.profilePage();
       handler.setUpdateAvatarListener();
