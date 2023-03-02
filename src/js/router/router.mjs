@@ -23,6 +23,7 @@ export default function router() {
       renderProfileButtonTemplate();
       page.listingsPage();
       handler.setCreateListingFormListener();
+      handler.setSearchListener();
       return;
     case "/listing.html":
       renderLogin();
