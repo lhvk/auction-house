@@ -14,9 +14,17 @@ export function listingTemplate(listingData) {
 
     <div class="d-flex flex-column gap-5">
       <div class="d-flex flex-column gap-2">
-        <p class="fw-light m-0">Leading bid<span class="fw-bold"> ${totalAmount(listingData.bids)} </span></p>
-        <p class="fw-light m-0">Bids <span class="fw-bold">${listingData._count.bids}</span></p>
-        <p class="fw-light m-0">Ends <span class="fw-bold">${dateCountDown(listingData.endsAt)}</span></p>
+        <p class="fw-light m-0">Leading bid<span class="fw-bold"> ${totalAmount(
+          listingData.bids
+        )} </span></p>
+        <p class="fw-light m-0">Bids <span class="fw-bold">${
+          listingData._count.bids
+        }</span></p>
+        <p class="fw-light m-0">Ends <span class="fw-bold">${
+          listingData.endsAt < new Date().toISOString()
+            ? "Listing has ended"
+            : dateCountDown(listingData.endsAt)
+        }</span></p>
       </div>
 
       <div>
@@ -35,7 +43,8 @@ export function listingTemplate(listingData) {
       </div>
       <div class="d-flex align-items-center">
         <div>
-          <img class="rounded-circle" src="${listingData.seller.avatar ? listingData.seller.avatar : "https://picsum.photos/200/300"}" alt="Card
+          <img class="rounded-circle" src=${listingData.seller.avatar}
+           alt="Card
           image cap" />
         </div>
         <div class="card-body">

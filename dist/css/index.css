@@ -10896,6 +10896,10 @@ html {
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font-size: 1.4rem;
   color: #222;

@@ -16,14 +16,14 @@ export async function registerUser(profile) {
   });
 
   const result = await response.json();
-  console.log(response);
-  console.log(result);
 
   if (response.ok) {
     alert(`User successfully created. You can now log in`);
     window.location.replace("/index.html");
   } else {
-    result.errors.forEach((x) => alert(`Failed to register user: ${x.message}`));
+    result.errors.forEach((x) =>
+      alert(`Failed to register user: ${x.message}`)
+    );
   }
   return result;
 }

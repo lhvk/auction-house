@@ -5,6 +5,7 @@ import {
   renderListingMediaTemplate,
   renderListingTemplate,
 } from "../templates/index.mjs";
+import { documentTitle } from "../ui/render.mjs";
 
 export async function listingPage() {
   const { id } = getSearchParams();
@@ -22,4 +23,5 @@ export async function listingPage() {
   }
 
   document.querySelector("h1").textContent = listing.title;
+  documentTitle(listing.title);
 }

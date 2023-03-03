@@ -40,5 +40,11 @@ export default function router() {
       page.profilePage();
       handler.setUpdateAvatarListener();
       return;
+    case "/about.html":
+      renderLogin();
+      handler.setLoginFormListener();
+      handler.setLogoutListener();
+      renderProfileButtonTemplate();
+      return;
   }
 }
