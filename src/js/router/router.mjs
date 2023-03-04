@@ -15,6 +15,8 @@ export default function router() {
       handler.setLoginFormListener();
       handler.setLogoutListener();
       renderProfileButtonTemplate();
+      page.homePage();
+      handler.setSearchListener();
       return;
     case "/listings.html":
       renderLogin();
@@ -42,6 +44,7 @@ export default function router() {
       return;
     case "/about.html":
       renderLogin();
+      handler.goBack();
       handler.setLoginFormListener();
       handler.setLogoutListener();
       renderProfileButtonTemplate();

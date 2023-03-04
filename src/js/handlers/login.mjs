@@ -11,6 +11,7 @@ export function setLoginFormListener() {
       const profile = Object.fromEntries(formData.entries());
 
       loginUser(profile);
+      form.reset();
     });
   }
 }

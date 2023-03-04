@@ -7,8 +7,7 @@ export function dateCountDown(date) {
   const months = diff.getUTCMonth(); // Gives month count of difference
   const days = diff.getUTCDate() - 1; // Gives day count of difference
 
-  if (years)
-    return `${years} years, ${months} months and ${days} days remaining`;
+  if (years) return `${years} years, ${months} months and ${days} days remaining`;
   if (months) return `${months} months and ${days} days remaining`;
   if (days) return `${days} days remaining`;
 }

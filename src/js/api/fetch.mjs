@@ -16,8 +16,3 @@ export async function authFetch(url, options = {}) {
     headers: headers(),
   });
 }
-
-// Fetch
-export async function useFetch(url) {
-  return fetch(url);
-}

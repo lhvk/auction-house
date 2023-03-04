@@ -14,16 +14,10 @@ export function listingTemplate(listingData) {
 
     <div class="d-flex flex-column gap-5">
       <div class="d-flex flex-column gap-2">
-        <p class="fw-light m-0">Leading bid<span class="fw-bold"> ${totalAmount(
-          listingData.bids
-        )} </span></p>
-        <p class="fw-light m-0">Bids <span class="fw-bold">${
-          listingData._count.bids
-        }</span></p>
+        <p class="fw-light m-0">Leading bid<span class="fw-bold"> ${totalAmount(listingData.bids)} </span></p>
+        <p class="fw-light m-0">Bids <span class="fw-bold">${listingData._count.bids}</span></p>
         <p class="fw-light m-0">Ends <span class="fw-bold">${
-          listingData.endsAt < new Date().toISOString()
-            ? "Listing has ended"
-            : dateCountDown(listingData.endsAt)
+          listingData.endsAt < new Date().toISOString() ? "Listing has ended" : dateCountDown(listingData.endsAt)
         }</span></p>
       </div>
 
@@ -43,18 +37,23 @@ export function listingTemplate(listingData) {
       </div>
       <div class="d-flex align-items-center">
         <div>
-          <img class="rounded-circle" src=${listingData.seller.avatar}
-           alt="Card
-          image cap" />
+      
+          <img class="rounded-circle" src="${
+            listingData.seller.avatar
+          }" onerror="this.onerror=null; this.src='/src/assets/fallback_profile.jpg'" alt="Seller's avatar" />
+
         </div>
         <div class="card-body">
           <h4 class="m-0">${listingData.seller.name}</h4>
           <hr class="my-2" />
-
           <p class="text-muted m-0">${listingData.seller.email}</p>
         </div>
       </div>
     </div>
+    <div data-visible="loggedIn">
+    <h3 class="fs-4 mb-4">Bid history</h3>
+    <ul id="bidHistory"></ul>
+  </div>
   </div>
 </div>`;
 }

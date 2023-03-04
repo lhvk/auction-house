@@ -8,13 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="dist/css/index.css" />
-    <script
-      defer
-      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script defer type="module" src="src/js/index.js"></script>
     <title>Auction House | Home</title>
   </head>
@@ -29,26 +25,16 @@
             data-bs-toggle="modal"
             data-bs-target="#loginModal"
             data-auth="login"
-            data-visible="loggedOut"
-          >
+            data-visible="loggedOut">
             login
           </button>
-          <button
-            id="logoutBtn"
-            class="btn btn-lg btn-dark"
-            data-auth="logout"
-            data-visible="loggedIn"
-          >
-            logout
-          </button>
+          <button id="logoutBtn" class="btn btn-lg btn-dark" data-auth="logout" data-visible="loggedIn">logout</button>
         </div>
       </nav>
 
       <nav class="navbar navbar-expand-lg px-5 py-4">
         <div class="container-fluid">
-          <a class="navbar-brand brand me-5" href="/index.html"
-            >auction house</a
-          >
+          <a class="navbar-brand brand me-5" href="/index.html">auction house</a>
           <button
             class="navbar-toggler border-0 p-0"
             type="button"
@@ -56,26 +42,14 @@
             data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0"
-            id="navbarNavAltMarkup"
-          >
+          <div class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0" id="navbarNavAltMarkup">
             <div class="navbar-nav gap-4">
-              <a class="nav-link text-body text-uppercase" href="./index.html"
-                >home</a
-              >
-              <a class="nav-link text-body text-uppercase" href="/listings.html"
-                >auctions</a
-              >
-              <a
-                class="nav-link text-body text-uppercase nav-link-active"
-                href="./about.html"
-                >about</a
-              >
+              <a class="nav-link text-body text-uppercase" href="./index.html">home</a>
+              <a class="nav-link text-body text-uppercase" href="/listings.html">auctions</a>
+              <a class="nav-link text-body text-uppercase nav-link-active" href="./about.html">about</a>
             </div>
           </div>
         </div>
@@ -87,17 +61,10 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0">
-            <button
-              type="button"
-              class="btn-close pt-3 px-3"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+            <button type="button" class="btn-close pt-3 px-3" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body border-0 px-5 pb-5">
-            <h2 class="text-center fs-4 mb-3">
-              Login to register lots and place bids
-            </h2>
+            <h2 class="text-center fs-4 mb-3">Login to register lots and place bids</h2>
             <form class="d-flex flex-column mb-5" id="loginForm" method="post">
               <input
                 name="email"
@@ -106,8 +73,7 @@
                 class="form-control p-4 border-dark mb-3"
                 type="email"
                 placeholder="EMAIL"
-                required
-              />
+                required />
               <input
                 name="password"
                 aria-label="Input your password"
@@ -116,23 +82,11 @@
                 type="password"
                 placeholder="PASSWORD"
                 autocomplete="on"
-                required
-              />
+                required />
             </form>
             <div class="d-flex flex-column">
-              <button
-                class="btn btn-outline-light p-3 mb-3"
-                form="loginForm"
-                type="submit"
-              >
-                login
-              </button>
-              <a
-                class="btn btn-outline-light p-3"
-                role="button"
-                href="/register.html"
-                >register user
-              </a>
+              <button class="btn btn-outline-light p-3 mb-3" form="loginForm" type="submit">login</button>
+              <a class="btn btn-outline-light p-3" role="button" href="/register.html">register user </a>
             </div>
           </div>
         </div>
@@ -141,7 +95,42 @@
 
     <!-- Login modal end -->
     <main>
-      <section></section>
+      <div class="section-header justify-content-between">
+        <button id="goBack" class="text-decoration-none text-secondary border-0 bg-transparent">
+          <img src="/src/assets/icons/chevron-left.svg" />
+          <span class="text-uppercase">go back</span>
+        </button>
+        <h1>about us</h1>
+      </div>
+      <section>
+        <div class="background-image">
+          <div class="color-overlay d-flex justify-content-center align-items-sm-center">
+            <div class="container">
+              <div class="col-12 col-md-10 col-lg-8 col-xl-6 p-5">
+                <div class="d-flex flex-column gap-2 text-container">
+                  <h2 class="display-1 mb-5">About us</h2>
+                  <h3>Vitae, pariatur?</h3>
+                  <p class="lead">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe laboriosam facere ad! Saepe quod quaerat sapiente sequi cupiditate
+                    eius. Nisi voluptas, velit iste, aliquid deserunt odio in ut id tenetur dolorem maiores adipisci fuga minima ipsum vitae. Tempore
+                    dolor unde, ipsam cum minima dolore iste ab corporis officia tenetur nisi eius
+                  </p>
+                  <h3>Lorem, ipsum dolor</h3>
+                  <p class="lead">
+                    quam quos beatae quo ea illum dolores ipsa distinctio! Numquam, voluptate magnam provident omnis est corrupti tenetur blanditiis
+                    incidunt harum sequi quidem atque culpa possimus rerum saepe soluta aut maxime eaque alias sed. Minima, quisquam cupiditate!
+                  </p>
+                  <h3>Amet consectetur, adipisicing elit</h3>
+                  <p class="lead">
+                    Corporis, ex dolorum sapiente veniam a, vero possimus iusto perspiciatis, magnam expedita exercitationem iure. Quo quis aperiam
+                    illo labore nobis cupiditate, repudiandae rem laborum saepe dicta
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="mt-auto">
       <p class="p-2">Auction House 2023 &copy;</p>

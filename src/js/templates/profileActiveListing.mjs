@@ -1,17 +1,16 @@
 import { dateCountDown, formatDate } from "../helpers/index.mjs";
 
 export function profileActiveListingTemplate(activeListing) {
-  return `  <li>
+  return `  
+  <li>
   <a
     href="/listing.html?id=${activeListing.id}"
     class="seller-card card bg-transparent d-flex border-0"
   >
     <div class="d-flex align-items-center">
       <div>
-        <img
-          src="${activeListing.media[0]}"
-          alt="Image of ${activeListing.title}"
-        />
+      <img
+      src="${activeListing.avatar}" onerror="this.onerror=null; this.src='/src/assets/fallback_profile.jpg'" />
       </div>
       <div class="card-body">
         <h4 class="m-0">${activeListing.title}</h4>
@@ -32,8 +31,5 @@ export function profileActiveListingTemplate(activeListing) {
 }
 
 export function renderProfileActiveListingTemplate(activeListing, parent) {
-  parent.insertAdjacentHTML(
-    "beforeend",
-    profileActiveListingTemplate(activeListing)
-  );
+  parent.insertAdjacentHTML("beforeend", profileActiveListingTemplate(activeListing));
 }

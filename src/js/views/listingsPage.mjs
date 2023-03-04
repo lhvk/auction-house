@@ -1,8 +1,11 @@
 import { getListings } from "../api/listings/index.mjs";
-import { renderListingsTemplate } from "../templates/index.mjs";
+import { renderLoaderTemplate, renderListingsTemplate, loaderTemplate } from "../templates/index.mjs";
+import { hideLoader } from "../ui/render.mjs";
 
 export async function listingsPage() {
-  const listings = await getListings();
   const listingsContainer = document.querySelector("#listingsContainer");
+  renderLoaderTemplate(listingsContainer, loaderTemplate());
+  const listings = await getListings();
   renderListingsTemplate(listings, listingsContainer);
+  hideLoader();
 }
