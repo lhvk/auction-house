@@ -1,23 +1,24 @@
 # auction-house
 
-###Installation
+
+### Installation
 ```
 npm install
 ```
-### dependencies
+### Dependencies
 ```
 npm install bootstrap
 ```
-### dev-dependencies
+### Dev-dependencies
 ```
 npm install sass --save-dev
+npm install -g live-server
 ```
-
-### Then
+### Build
 ```
 npm run build
 ```
-### start sass compiler
+### Start sass compiler
 ```
 npm run watch
 ```
