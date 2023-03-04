@@ -22,3 +22,6 @@ npm run build
 ```
 npm run watch
 ```
+
+## About the project
+The fetch for all listings displays only active on the feature on the "home" site. The fetch displays both active and inactive listings at the "auction" site.
