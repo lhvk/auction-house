@@ -18,7 +18,7 @@ npm install -g live-server
 ```
 npm run build
 ```
-### Start sass compiler
+### Start Sass compiler
 ```
 npm run watch
 ```
