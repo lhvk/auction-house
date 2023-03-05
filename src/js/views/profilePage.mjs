@@ -6,6 +6,7 @@ import {
   renderProfileTemplate,
   renderLoaderTemplate,
   loaderTemplate,
+  renderprofileInActiveListingTemplate,
 } from "../templates/index.mjs";
 import { documentTitle, hideLoader } from "../ui/render.mjs";
 import { getListings } from "../api/listings/listings.mjs";
@@ -20,12 +21,17 @@ export async function profilePage() {
   renderProfileTemplate(profileData, profileContainer);
   hideLoader();
 
-  // Filter out the inactive listings as the date calc function returned errors due to date range on expired listings
   const onlyActive = profileData.listings.filter((x) => x.endsAt > new Date().toISOString());
+  const onlyInActive = profileData.listings.filter((x) => x.endsAt < new Date().toISOString());
 
   onlyActive.map((activeListings) => {
     const activeListingsContainer = document.querySelector("#activeListings");
     return renderProfileActiveListingTemplate(activeListings, activeListingsContainer);
+  });
+
+  onlyInActive.map((inactiveListings) => {
+    const inActiveListingsContainer = document.querySelector("#inActiveListings");
+    return renderprofileInActiveListingTemplate(inactiveListings, inActiveListingsContainer);
   });
 
   const wins = listings.filter((x) => x.id === profileData.wins.map((y) => y.id));
