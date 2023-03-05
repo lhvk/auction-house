@@ -10,7 +10,7 @@ export function profileActiveListingTemplate(activeListing) {
     <div class="d-flex align-items-center">
       <div>
       <img
-      src="${activeListing.avatar}" onerror="this.onerror=null; this.src='/src/assets/fallback_profile.jpg'" />
+      src="${activeListing.avatar}" onerror="this.onerror=null; this.src='/src/assets/rubiks.png'" />
       </div>
       <div class="card-body">
         <h4 class="m-0">${activeListing.title}</h4>

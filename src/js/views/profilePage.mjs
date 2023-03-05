@@ -4,29 +4,28 @@ import {
   renderProfileWinsTemplate,
   renderProfileActiveListingTemplate,
   renderProfileTemplate,
+  renderLoaderTemplate,
+  loaderTemplate,
 } from "../templates/index.mjs";
-import { documentTitle } from "../ui/render.mjs";
+import { documentTitle, hideLoader } from "../ui/render.mjs";
 import { getListings } from "../api/listings/listings.mjs";
 
 export async function profilePage() {
+  const profileContainer = document.querySelector("#profileContainer");
+  renderLoaderTemplate(profileContainer, loaderTemplate());
   const profile = load("profile");
   const profileData = await getProfile(profile.name);
   const listings = await getListings();
 
-  const profileContainer = document.querySelector("#profileContainer");
   renderProfileTemplate(profileData, profileContainer);
+  hideLoader();
 
   profileData.listings.map((activeListings) => {
     const activeListingsContainer = document.querySelector("#activeListings");
-    return renderProfileActiveListingTemplate(
-      activeListings,
-      activeListingsContainer
-    );
+    return renderProfileActiveListingTemplate(activeListings, activeListingsContainer);
   });
 
-  const wins = listings.filter(
-    (x) => x.id === profileData.wins.map((y) => y.id)
-  );
+  const wins = listings.filter((x) => x.id === profileData.wins.map((y) => y.id));
 
   wins.map((y) => {
     const winsContainer = document.querySelector("#wins");

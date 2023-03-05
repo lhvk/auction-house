@@ -1,4 +1,3 @@
-import { hideLoader } from "../../ui/render.mjs";
 import { API_HOST_URL } from "../constants.mjs";
 
 const action = "/listings/";
