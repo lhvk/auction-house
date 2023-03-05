@@ -23,7 +23,6 @@ export async function loginUser(profile) {
   storage.save("profile", user);
 
   if (accessToken) {
-    alert("You are now logged in");
     loginModal.hide();
     renderLogin();
   } else alert("Wrong password or username");

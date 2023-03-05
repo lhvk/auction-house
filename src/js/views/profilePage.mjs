@@ -20,16 +20,19 @@ export async function profilePage() {
   renderProfileTemplate(profileData, profileContainer);
   hideLoader();
 
-  profileData.listings.map((activeListings) => {
+  // Filter out the inactive listings as the date calc function returned errors due to date range on expired listings
+  const onlyActive = profileData.listings.filter((x) => x.endsAt > new Date().toISOString());
+
+  onlyActive.map((activeListings) => {
     const activeListingsContainer = document.querySelector("#activeListings");
     return renderProfileActiveListingTemplate(activeListings, activeListingsContainer);
   });
 
   const wins = listings.filter((x) => x.id === profileData.wins.map((y) => y.id));
 
-  wins.map((y) => {
+  wins.map((won) => {
     const winsContainer = document.querySelector("#wins");
-    renderProfileWinsTemplate(y, winsContainer);
+    renderProfileWinsTemplate(won, winsContainer);
   });
 
   documentTitle(profile.name);
