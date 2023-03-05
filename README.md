@@ -5,7 +5,7 @@
 
 ### Versions
 
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-v5.2.3-blue)]
+[!Bootstrap(https://img.shields.io/badge/Bootstrap-v5.2.3-blue)]
 
 ### Installation
 ```
