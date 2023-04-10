@@ -1,6 +1,6 @@
 export function profileButtonTemplate() {
   const link = document.createElement("a");
-  link.href = "./profile.html";
+  link.href = "../profile";
   link.classList.add("profile-button");
   const icon = new Image();
   icon.src = "/src/assets/icons/person-fill.svg";
