@@ -9,9 +9,9 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="dist/css/index.css" />
-    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer type="module" src="src/js/index.js"></script>
+    <link rel="stylesheet" href="/dist/css/index.css" />
+    <script defer src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer type="module" src="/src/js/index.js"></script>
     <title>Auction House | Home</title>
   </head>
   <body>
@@ -34,7 +34,7 @@
 
       <nav class="navbar navbar-expand-lg px-5 py-4">
         <div class="container-fluid">
-          <a class="navbar-brand brand me-5" href="/index.html">auction house</a>
+          <a class="navbar-brand brand me-5" href="../home">auction house</a>
           <button
             class="navbar-toggler border-0 p-0"
             type="button"
@@ -47,9 +47,9 @@
           </button>
           <div class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0" id="navbarNavAltMarkup">
             <div class="navbar-nav gap-4">
-              <a class="nav-link text-body text-uppercase" href="./index.html">home</a>
-              <a class="nav-link text-body text-uppercase" href="/listings.html">auctions</a>
-              <a class="nav-link text-body text-uppercase nav-link-active" href="./about.html">about</a>
+              <a class="nav-link text-body text-uppercase nav-link-active" href="../home">home</a>
+              <a class="nav-link text-body text-uppercase" href="../listings">auctions</a>
+              <a class="nav-link text-body text-uppercase" href="../about">about</a>
             </div>
           </div>
         </div>
@@ -95,40 +95,56 @@
 
     <!-- Login modal end -->
     <main>
-      <div class="section-header justify-content-between">
-        <button id="goBack" class="text-decoration-none text-secondary border-0 bg-transparent">
-          <img src="/src/assets/icons/chevron-left.svg" />
-          <span class="text-uppercase">go back</span>
-        </button>
-        <h1>about us</h1>
-      </div>
       <section>
-        <div class="background-image">
-          <div class="color-overlay d-flex justify-content-center align-items-sm-center">
-            <div class="container">
-              <div class="col-12 col-md-10 col-lg-8 col-xl-6 p-5">
-                <div class="d-flex flex-column gap-2 text-container">
-                  <h2 class="display-1 mb-5">About us</h2>
-                  <h3>Vitae, pariatur?</h3>
-                  <p class="lead">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe laboriosam facere ad! Saepe quod quaerat sapiente sequi cupiditate
-                    eius. Nisi voluptas, velit iste, aliquid deserunt odio in ut id tenetur dolorem maiores adipisci fuga minima ipsum vitae. Tempore
-                    dolor unde, ipsam cum minima dolore iste ab corporis officia tenetur nisi eius
-                  </p>
-                  <h3>Lorem, ipsum dolor</h3>
-                  <p class="lead">
-                    quam quos beatae quo ea illum dolores ipsa distinctio! Numquam, voluptate magnam provident omnis est corrupti tenetur blanditiis
-                    incidunt harum sequi quidem atque culpa possimus rerum saepe soluta aut maxime eaque alias sed. Minima, quisquam cupiditate!
-                  </p>
-                  <h3>Amet consectetur, adipisicing elit</h3>
-                  <p class="lead">
-                    Corporis, ex dolorum sapiente veniam a, vero possimus iusto perspiciatis, magnam expedita exercitationem iure. Quo quis aperiam
-                    illo labore nobis cupiditate, repudiandae rem laborum saepe dicta
-                  </p>
+        <div class="bg-dark">
+          <div class="container-fluid position-relative">
+            <div class="me-0 row">
+              <div class="col-lg-8 order-lg-2 pr-0">
+                <div class="h-100 hero-image-container">
+                  <div class="hero-image-wrapper">
+                    <img src="/src/assets/hero.jpg" alt="" class="hero-image mw-100" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="d-flex flex-column justify-content-end h-100 pt-3 pb-5 ps-xxl-5 hero-content">
+                  <div class="ps-xl-5">
+                    <span class="text-light text-uppercase"> it's now possible to make bids </span>
+                    <h1 class="mb-2 mt-3 text-light">The Grand Auction is now live</h1>
+                    <span class="text-light sub-text-hero mt-4"> &ldquo;A great collection of items from the modern era&rdquo; </span>
+                    <ul class="text-light text-uppercase d-flex mt-4 p-0">
+                      <li class="d-flex me-5">
+                        <img src="/src/assets/icons/calendar4.svg" class="me-3" />
+                        <p class="mb-0">1 feb - 31 march</p>
+                      </li>
+                      <li class="d-flex">
+                        <img src="/src/assets/icons/geo-alt.svg" class="me-3" />
+                        <p class="mb-0">online</p>
+                      </li>
+                    </ul>
+                    <div class="mt-5">
+                      <a href="../listings" class="btn btn-hero btn-secondary btn-lg py-3 px-5"> explore </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="my-5">
+        <div class="mx-5 d-flex justify-content-between align-items-center">
+          <h2 class="display-3">Featured</h2>
+          <div class="col-md-4">
+            <form class="m-0" role="search">
+              <input id="searchInput" class="form-control rounded-0 fs-5" type="search" placeholder="Search" aria-label="Search" />
+            </form>
+          </div>
+        </div>
+
+        <div id="featuredListingsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 justify-content-center">
+          <!-- Listings goes here -->
         </div>
       </section>
     </main>

@@ -3,9 +3,7 @@ import { dateCountDown } from "../helpers/index.mjs";
 // MULTIPLE LISTINGS
 export function listingsTemplate(listingData) {
   return ` 
-  <a href="/listing.html?id=${
-    listingData.id
-  }" class="card p-5 mb-5 border-0 listings-card">
+  <a href="../listing/?id=${listingData.id}" class="card p-5 mb-5 border-0 listings-card">
   <div id="listingsMediaContainer" class="overflow-hidden">
 
     <img
@@ -27,15 +25,9 @@ export function listingsTemplate(listingData) {
       <div class="d-grid gap-2">
       <div class="mb-2">
       <p class="card-text m-0">Status</p>
-      <p class="card-text fw-bold">${
-        listingData.endsAt < new Date().toISOString()
-          ? "Listing has ended"
-          : `${dateCountDown(listingData.endsAt)}`
-      }</p>
+      <p class="card-text fw-bold">${listingData.endsAt < new Date().toISOString() ? "Listing has ended" : `${dateCountDown(listingData.endsAt)}`}</p>
     </div>
-      <button href="/listing.html?id=${
-        listingData.id
-      }" class="btn btn-outline-light">view</button>
+      <button href="../listing/?id=${listingData.id}" class="btn btn-outline-light">view</button>
     </div>
   
   </div>
@@ -44,8 +36,5 @@ export function listingsTemplate(listingData) {
 }
 
 export function renderListingsTemplate(listings, parent) {
-  parent.insertAdjacentHTML(
-    "beforeend",
-    listings.map(listingsTemplate).join("")
-  );
+  parent.insertAdjacentHTML("beforeend", listings.map(listingsTemplate).join(""));
 }

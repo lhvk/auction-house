@@ -3,7 +3,7 @@ import { formatDate } from "../helpers/index.mjs";
 export function profileInActiveListingTemplate(inactiveListing) {
   return `  
   <li>
-  <a href="/listing.html?id=${inactiveListing.id}" class="seller-card card bg-transparent d-flex border-0">
+  <a href="../listing/?id=${inactiveListing.id}" class="seller-card card bg-transparent d-flex border-0">
     <div class="d-flex align-items-center">
       <div>
         <img src="${inactiveListing.media[0]}" onerror="this.onerror=null; this.src='/src/assets/rubiks.png'" />

@@ -9,7 +9,7 @@
     "watch": "sass --watch src/scss:dist/css & live-server"
   },
   "keywords": [],
-  "author": "",
+  "author": "lhvk",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.3"
