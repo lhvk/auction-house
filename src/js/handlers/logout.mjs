@@ -7,7 +7,7 @@ export function setLogoutListener() {
     logout();
     alert("You're now logged out");
     if (location.pathname === "/src/routes/profile/") {
-      window.location.replace("../home");
+      window.location.replace("../home/");
     }
     renderLogin();
   });
