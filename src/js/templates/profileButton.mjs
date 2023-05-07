@@ -3,7 +3,7 @@ export function profileButtonTemplate() {
   link.href = "../profile";
   link.classList.add("profile-button");
   const icon = new Image();
-  icon.src = "/src/assets/icons/person-fill.svg";
+  icon.src = "../assets/icons/person-fill.svg";
   icon.alt = "Your profile";
   link.append(icon);
   return link;

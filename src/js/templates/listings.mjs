@@ -9,7 +9,7 @@ export function listingsTemplate(listingData) {
     <img
       src="${listingData.media}"
       onerror="this.onerror=null; 
-      this.src='/src/assets/rubiks.png'"
+      this.src='../assets/rubiks.png'"
       class="listings-card-image"
       alt="Image of the listing for sale" />
   </div>

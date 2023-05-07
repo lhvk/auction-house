@@ -60,7 +60,7 @@ export function carouselTemplate(listingData) {
       <img
         src="${listingData.media[0]}"
         onerror="this.onerror=null; 
-  this.src='/src/assets/rubiks.png'"
+  this.src='../assets/rubiks.png'"
         class="listing-card-image"
         alt="Image of the listing for sale"
       />
@@ -70,7 +70,7 @@ export function carouselTemplate(listingData) {
       <img
         src="${listingData.media[1]}"
         onerror="this.onerror=null; 
-  this.src='/src/assets/rubiks.png'"
+  this.src='../assets/rubiks.png'"
         class="listing-card-image"
         alt="Image of the listing for sale"
       />
@@ -80,7 +80,7 @@ export function carouselTemplate(listingData) {
       <img
         src="${listingData.media[2]}"
         onerror="this.onerror=null; 
-    this.src='/src/assets/rubiks.png'"
+    this.src='../assets/rubiks.png'"
         class="listing-card-image"
         alt="Image of the listing for sale"
       />

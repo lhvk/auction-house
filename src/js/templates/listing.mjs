@@ -40,7 +40,7 @@ export function listingTemplate(listingData) {
       
           <img class="rounded-circle" src="${
             listingData.seller.avatar
-          }" onerror="this.onerror=null; this.src='/src/assets/fallback_profile.jpg'" alt="Seller's avatar" />
+          }" onerror="this.onerror=null; this.src='../assets/fallback_profile.jpg'" alt="Seller's avatar" />
 
         </div>
         <div class="card-body">
