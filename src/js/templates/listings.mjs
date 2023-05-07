@@ -3,7 +3,7 @@ import { dateCountDown } from "../helpers/index.mjs";
 // MULTIPLE LISTINGS
 export function listingsTemplate(listingData) {
   return ` 
-  <a href="../listing/?id=${listingData.id}" class="card p-5 mb-5 border-0 listings-card">
+  <a href="${location.pathname === "/src/listings/" ? ".." : "."}/listing/?id=${listingData.id}" class="card p-5 mb-5 border-0 listings-card">
   <div id="listingsMediaContainer" class="overflow-hidden">
 
     <img
@@ -27,7 +27,7 @@ export function listingsTemplate(listingData) {
       <p class="card-text m-0">Status</p>
       <p class="card-text fw-bold">${listingData.endsAt < new Date().toISOString() ? "Listing has ended" : `${dateCountDown(listingData.endsAt)}`}</p>
     </div>
-      <button href="../listing/?id=${listingData.id}" class="btn btn-outline-light">view</button>
+      <button href="${location.pathname === "/src/listings/" ? ".." : "."}/listing/?id=${listingData.id}" class="btn btn-outline-light">view</button>
     </div>
   
   </div>

@@ -10,7 +10,7 @@ export default function router() {
     case "/src/register/":
       handler.setRegisterFormListener();
       return;
-    case "/src/home/":
+    case "/src/":
       renderLogin();
       handler.setLoginFormListener();
       handler.setLogoutListener();
