@@ -7,10 +7,10 @@ export default function router() {
   const path = location.pathname;
 
   switch (path) {
-    case "/src/register/":
+    case "/register/":
       handler.setRegisterFormListener();
       return;
-    case "/src/":
+    case "/":
       renderLogin();
       handler.setLoginFormListener();
       handler.setLogoutListener();
@@ -18,7 +18,7 @@ export default function router() {
       page.homePage();
       handler.setSearchListener();
       return;
-    case "/src/listings/":
+    case "/listings/":
       renderLogin();
       handler.setLoginFormListener();
       handler.setLogoutListener();
@@ -27,7 +27,7 @@ export default function router() {
       handler.setCreateListingFormListener();
       handler.setSearchListener();
       return;
-    case "/src/listing/":
+    case "/listing/":
       renderLogin();
       handler.goBack();
       handler.setLoginFormListener();
@@ -36,13 +36,13 @@ export default function router() {
       page.listingPage();
       handler.setBidOnListingFormListener();
       return;
-    case "/src/profile/":
+    case "/profile/":
       handler.goBack();
       handler.setLogoutListener();
       page.profilePage();
       handler.setUpdateAvatarListener();
       return;
-    case "/src/about/":
+    case "/about/":
       renderLogin();
       handler.goBack();
       handler.setLoginFormListener();
