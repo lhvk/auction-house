@@ -9,7 +9,7 @@ export function profileActiveListingTemplate(activeListing) {
         <img src="${activeListing.media[0]}" onerror="this.onerror=null; this.src='/src/assets/rubiks.png'" />
       </div>
       <div class="card-body">
-        <h4 class="m-0">${activeListing.title}</h4>
+        <h4 class="m-0">${activeListing.title.length > 0 ? activeListing.title : "There are no active listings"}</h4>
         <hr class="my-2" />
 
         <p class="text-body m-0">
