@@ -19,7 +19,7 @@ export async function registerUser(profile) {
 
   if (response.ok) {
     alert(`User successfully created. You can now log in`);
-    window.location.replace("../home/");
+    window.location.replace("./");
   } else {
     result.errors.forEach((x) => alert(`Failed to register user: ${x.message}`));
   }
