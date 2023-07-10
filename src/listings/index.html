@@ -2,23 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="../styles/index.css" />
-    <script defer src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer type="module" src="../js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="../styles/index.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/index.js"></script>
     <title>Auction House | Listings</title>
   </head>
   <body>
     <header class="border-bottom">
       <nav class="navbar bg-primary px-5">
         <div class="container-fluid justify-content-end gap-4">
-          <div id="profileLink" data-visible="loggedIn"></div>
+          <div
+            id="profileLink"
+            data-visible="loggedIn"></div>
           <button
             id="loginBtn"
             class="btn btn-lg btn-dark"
@@ -28,13 +46,23 @@
             data-visible="loggedOut">
             login
           </button>
-          <button id="logoutBtn" class="btn btn-lg btn-dark" data-auth="logout" data-visible="loggedIn">logout</button>
+          <button
+            id="logoutBtn"
+            class="btn btn-lg btn-dark"
+            data-auth="logout"
+            data-visible="loggedIn">
+            logout
+          </button>
         </div>
       </nav>
 
       <nav class="navbar navbar-expand-lg px-5 py-4">
         <div class="container-fluid">
-          <a class="navbar-brand brand me-5" href="../">auction house</a>
+          <a
+            class="navbar-brand brand me-5"
+            href="../"
+            >auction house</a
+          >
           <button
             class="navbar-toggler border-0 p-0"
             type="button"
@@ -45,29 +73,61 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0" id="navbarNavAltMarkup">
+          <div
+            class="collapse navbar-collapse justify-content-between pt-5 pt-lg-0"
+            id="navbarNavAltMarkup">
             <div class="navbar-nav gap-4">
-              <a class="nav-link text-body text-uppercase" href="../">home</a>
-              <a class="nav-link text-body text-uppercase nav-link-active" href="../listings">listings</a>
-              <a class="nav-link text-body text-uppercase" href="../about">about</a>
+              <a
+                class="nav-link text-body text-uppercase"
+                href="../"
+                >home</a
+              >
+              <a
+                class="nav-link text-body text-uppercase nav-link-active"
+                href="../listings"
+                >listings</a
+              >
+              <a
+                class="nav-link text-body text-uppercase"
+                href="../about"
+                >about</a
+              >
             </div>
-            <form class="d-flex py-5 py-lg-0" role="search">
-              <input id="searchInput" class="form-control rounded-0 fs-5" type="search" placeholder="Search" aria-label="Search" />
+            <form
+              class="d-flex py-5 py-lg-0"
+              role="search">
+              <input
+                id="searchInput"
+                class="form-control rounded-0 fs-5"
+                type="search"
+                placeholder="Search"
+                aria-label="Search" />
             </form>
           </div>
         </div>
       </nav>
     </header>
     <!-- Login modal -->
-    <div class="modal" id="loginModal" tabindex="-1">
+    <div
+      class="modal"
+      id="loginModal"
+      tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0">
-            <button type="button" class="btn-close pt-3 px-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close pt-3 px-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
           </div>
           <div class="modal-body border-0 px-5 pb-5">
-            <h2 class="text-center fs-4 mb-3">Login to register lots and place bids</h2>
-            <form class="d-flex flex-column mb-5" id="loginForm">
+            <h2 class="text-center fs-4 mb-3">
+              Login to register lots and place bids
+            </h2>
+            <form
+              class="d-flex flex-column mb-5"
+              id="loginForm">
               <input
                 name="email"
                 aria-label="Input your email"
@@ -87,8 +147,18 @@
                 required />
             </form>
             <div class="d-flex flex-column">
-              <button class="btn btn-outline-light p-3 mb-3" form="loginForm" type="submit">login</button>
-              <a class="btn btn-outline-light p-3" role="button" href="../register">register user </a>
+              <button
+                class="btn btn-outline-light p-3 mb-3"
+                form="loginForm"
+                type="submit">
+                login
+              </button>
+              <a
+                class="btn btn-outline-light p-3"
+                role="button"
+                href="../register"
+                >register user
+              </a>
             </div>
           </div>
         </div>
@@ -99,28 +169,43 @@
     <main>
       <section>
         <div class="container-fluid">
-          <div id="sectionHeaderListings" class="d-flex justify-content-between px-5 mt-5">
+          <div
+            id="sectionHeaderListings"
+            class="d-flex justify-content-between px-5 mt-5">
             <h1 class="text-left">Browse all listings</h1>
             <button
               class="btn-outline-light btn border-0 text-secondary px-4 align-items-center"
               data-bs-toggle="modal"
               data-bs-target="#createListingModal"
               data-visible="loggedIn">
-              <img src="../assets/icons/plus-circle.svg" class="me-2" />
+              <img
+                src="../assets/icons/plus-circle.svg"
+                class="me-2" />
               new listing
             </button>
           </div>
 
           <!-- New listing modal -->
-          <div class="modal fade" id="createListingModal" tabindex="-1" aria-labelledby="createListingTitle" aria-hidden="true">
+          <div
+            class="modal fade"
+            id="createListingModal"
+            tabindex="-1"
+            aria-labelledby="createListingTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header border-0">
-                  <button type="button" class="btn-close pt-3 px-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <button
+                    type="button"
+                    class="btn-close pt-3 px-3"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-5 pb-5">
                   <h2 class="text-center fs-4 mb-3">Create listing</h2>
-                  <form id="createListingForm" class="d-flex flex-column gap-3">
+                  <form
+                    id="createListingForm"
+                    class="d-flex flex-column gap-3">
                     <!-- title -->
                     <input
                       name="title"
@@ -169,15 +254,28 @@
                   </form>
                 </div>
                 <div class="modal-footer px-5 py-4">
-                  <button type="reset" class="btn btn-lg btn-outline-light" form="createListingForm" data-bs-dismiss="modal">Cancel</button>
-                  <button class="btn btn-lg btn-dark" type="submit" form="createListingForm">Create</button>
+                  <button
+                    type="reset"
+                    class="btn btn-lg btn-outline-light"
+                    form="createListingForm"
+                    data-bs-dismiss="modal">
+                    Cancel
+                  </button>
+                  <button
+                    class="btn btn-lg btn-dark"
+                    type="submit"
+                    form="createListingForm">
+                    Create
+                  </button>
                 </div>
               </div>
             </div>
           </div>
           <!-- New listing modal end -->
 
-          <div id="listingsContainer" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 justify-content-center">
+          <div
+            id="listingsContainer"
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4 justify-content-center">
             <!-- Listings goes here -->
           </div>
         </div>
