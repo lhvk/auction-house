@@ -1,11 +1,9 @@
 {
   "name": "auction-house",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An auction website using the Noroff api, built with Bootstrap and Sass",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass src/scss:src/styles",
+    "sass": "sass src/scss:src/styles",
     "watch": "sass --watch src/scss:src/styles & live-server"
   },
   "keywords": [],
