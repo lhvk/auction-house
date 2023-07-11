@@ -4,7 +4,8 @@
   "description": "An auction website using the Noroff api, built with Bootstrap and Sass",
   "scripts": {
     "sass": "sass src/scss:src/styles",
-    "watch": "sass --watch src/scss:src/styles & live-server"
+    "watch": "sass --watch src/scss:src/styles & live-server",
+    "build": "rm -rf src && mkdir src && rsync -rv * src --exclude ./src"
   },
   "keywords": [],
   "author": "lhvk",
