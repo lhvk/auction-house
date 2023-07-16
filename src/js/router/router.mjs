@@ -5,9 +5,8 @@ import * as page from "../views/index.mjs";
 
 export default function router() {
   const path = location.pathname;
-
   switch (path) {
-    case "/register/":
+    case "/register":
       handler.setRegisterFormListener();
       return;
     case "/":
@@ -18,7 +17,7 @@ export default function router() {
       page.homePage();
       handler.setSearchListener();
       return;
-    case "/listings/":
+    case "/listings":
       renderLogin();
       handler.setLoginFormListener();
       handler.setLogoutListener();
@@ -27,7 +26,7 @@ export default function router() {
       handler.setCreateListingFormListener();
       handler.setSearchListener();
       return;
-    case "/listing/":
+    case "/listing":
       renderLogin();
       handler.goBack();
       handler.setLoginFormListener();
@@ -36,13 +35,13 @@ export default function router() {
       page.listingPage();
       handler.setBidOnListingFormListener();
       return;
-    case "/profile/":
+    case "/profile":
       handler.goBack();
       handler.setLogoutListener();
       page.profilePage();
       handler.setUpdateAvatarListener();
       return;
-    case "/about/":
+    case "/about":
       renderLogin();
       handler.goBack();
       handler.setLoginFormListener();

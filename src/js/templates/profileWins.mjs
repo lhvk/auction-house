@@ -2,7 +2,7 @@ export function profileWinsTemplate(wins) {
   return `
   <li>
   <a
-    href="../listing/?id=${wins.id}"
+    href="../listing?id=${wins.id}"
     class="seller-card card bg-transparent d-flex border-0"
   >
     <div class="d-flex align-items-center">

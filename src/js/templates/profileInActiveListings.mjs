@@ -3,10 +3,14 @@ import { formatDate } from "../helpers/index.mjs";
 export function profileInActiveListingTemplate(inactiveListing) {
   return `  
   <li>
-  <a href="../listing/?id=${inactiveListing.id}" class="seller-card card bg-transparent d-flex border-0">
+  <a href="../listing?id=${
+    inactiveListing.id
+  }" class="seller-card card bg-transparent d-flex border-0">
     <div class="d-flex align-items-center">
       <div>
-        <img src="${inactiveListing.media[0]}" onerror="this.onerror=null; this.src='../assets/rubiks.png'" />
+        <img src="${
+          inactiveListing.media[0]
+        }" onerror="this.onerror=null; this.src='../assets/rubiks.png'" />
       </div>
       <div class="card-body">
         <h4 class="m-0">${inactiveListing.title}</h4>
@@ -14,7 +18,9 @@ export function profileInActiveListingTemplate(inactiveListing) {
 
         <p class="text-body m-0">
           Created
-          <span class="fw-bold">${new Date(inactiveListing.created).toDateString()} </span>
+          <span class="fw-bold">${new Date(
+            inactiveListing.created
+          ).toDateString()} </span>
         </p>
         <p class="text-body m-0">
           Ended
@@ -27,5 +33,8 @@ export function profileInActiveListingTemplate(inactiveListing) {
 }
 
 export function renderprofileInActiveListingTemplate(inactiveListing, parent) {
-  parent.insertAdjacentHTML("beforeend", profileInActiveListingTemplate(inactiveListing));
+  parent.insertAdjacentHTML(
+    "beforeend",
+    profileInActiveListingTemplate(inactiveListing)
+  );
 }

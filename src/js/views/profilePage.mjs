@@ -21,20 +21,33 @@ export async function profilePage() {
   renderProfileTemplate(profileData, profileContainer);
   hideLoader();
 
-  const onlyActive = profileData.listings.filter((x) => x.endsAt > new Date().toISOString());
-  const onlyInActive = profileData.listings.filter((x) => x.endsAt < new Date().toISOString());
+  const onlyActive = profileData.listings.filter(
+    (x) => x.endsAt > new Date().toISOString()
+  );
+  const onlyInActive = profileData.listings.filter(
+    (x) => x.endsAt < new Date().toISOString()
+  );
 
   onlyActive.map((activeListings) => {
     const activeListingsContainer = document.querySelector("#activeListings");
-    return renderProfileActiveListingTemplate(activeListings, activeListingsContainer);
+    return renderProfileActiveListingTemplate(
+      activeListings,
+      activeListingsContainer
+    );
   });
 
   onlyInActive.map((inactiveListings) => {
-    const inActiveListingsContainer = document.querySelector("#inActiveListings");
-    return renderprofileInActiveListingTemplate(inactiveListings, inActiveListingsContainer);
+    const inActiveListingsContainer =
+      document.querySelector("#inActiveListings");
+    return renderprofileInActiveListingTemplate(
+      inactiveListings,
+      inActiveListingsContainer
+    );
   });
 
-  const wins = listings.filter((x) => x.id === profileData.wins.map((y) => y.id));
+  const wins = listings.filter(
+    (x) => x.id === profileData.wins.map((y) => y.id)
+  );
 
   wins.map((won) => {
     const winsContainer = document.querySelector("#wins");
