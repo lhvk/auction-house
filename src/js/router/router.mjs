@@ -2,6 +2,7 @@ import * as handler from "../handlers/index.mjs";
 import { renderLogin } from "../ui/render.mjs";
 import { renderProfileButtonTemplate } from "../templates/profileButton.mjs";
 import * as page from "../views/index.mjs";
+import * as util from "../utils/pathUtils.mjs";
 
 export default function router() {
   const normalizedPath = util.normalizePath();
