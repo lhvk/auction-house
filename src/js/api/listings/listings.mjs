@@ -2,7 +2,6 @@ import { API_HOST_URL } from "../constants.mjs";
 
 const action = "/listings/";
 const limit = "?limit=12";
-const active = "&_active=true";
 
 // ALL LISTINGS
 export async function getListings() {
@@ -15,7 +14,7 @@ export async function getListings() {
 
 // FEATURED LISTINGS FOR LANDING PAGE
 export async function getFeaturedListings() {
-  const url = `${API_HOST_URL}${action}${limit}${active}`;
+  const url = `${API_HOST_URL}${action}${limit}`;
 
   const response = await fetch(url);
   return await response.json();
