@@ -1,6 +1,6 @@
 # auction-house
 
-![Image of the landing page]("/src/assets/home.png")
+![Image of the landing page](src/assets/home.png)
 
 ### Built using
 
