@@ -5,9 +5,12 @@ import * as page from "../views/index.mjs";
 
 export default function router() {
   const path = location.pathname;
-  const normalizedPath = path.endsWith("/") ? path.slice(0, -1) : path;
+  function normalizePath() {
+    const normalizedPath = path.endsWith("/") ? path.slice(0, -1) : path;
+    return normalizedPath || "/";
+  }
 
-  switch (normalizedPath) {
+  switch (normalizePath) {
     case "/register":
       handler.setRegisterFormListener();
       return;
