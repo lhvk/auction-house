@@ -4,17 +4,6 @@ import { load } from "../handlers/storage.mjs";
 export function renderLogin() {
   const token = load("token");
   document.body.classList[token ? "add" : "remove"]("logged-in");
-
-  // Toggle the display property of the buttons using JavaScript
-  document.getElementById("loginBtn").style.display = token
-    ? "none"
-    : "initial";
-  document.getElementById("logoutBtn").style.display = token
-    ? "initial"
-    : "none";
-  document.getElementById("profileLink").style.display = token
-    ? "block"
-    : "none";
 }
 
 // Change the title of a page

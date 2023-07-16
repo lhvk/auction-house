@@ -11232,24 +11232,17 @@ body {
   min-height: 100vh;
   height: 100%;
 }
-/* body [data-visible=loggedIn] {
+
+body [data-visible="loggedIn"] {
   display: none;
 }
-body [data-visible=loggedOut] {
+body [data-visible="loggedOut"] {
   display: initial;
 }
-body.logged-in [data-visible=loggedIn] {
+body.logged-in [data-visible="loggedIn"] {
   display: initial;
 }
-body.logged-in [data-visible=loggedOut] {
-  display: none;
-} */
-
-body [data-visible="loggedIn"] #loginBtn {
-  display: none;
-}
-
-body [data-visible="loggedOut"] #logoutBtn {
+body.logged-in [data-visible="loggedOut"] {
   display: none;
 }
 
