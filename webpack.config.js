@@ -26,32 +26,26 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
-      inject: "body",
     }),
     new HtmlWebpackPlugin({
       template: "./src/about/index.html",
       filename: "about/index.html",
-      inject: "body",
     }),
     new HtmlWebpackPlugin({
       template: "./src/listing/index.html",
       filename: "listing/index.html",
-      inject: "body",
     }),
     new HtmlWebpackPlugin({
       template: "./src/listings/index.html",
       filename: "listings/index.html",
-      inject: "body",
     }),
     new HtmlWebpackPlugin({
       template: "./src/profile/index.html",
       filename: "profile/index.html",
-      inject: "body",
     }),
     new HtmlWebpackPlugin({
       template: "./src/register/index.html",
       filename: "register/index.html",
-      inject: "body",
     }),
   ],
   devServer: {

@@ -5,7 +5,9 @@ import * as page from "../views/index.mjs";
 
 export default function router() {
   const path = location.pathname;
-  switch (path) {
+  const normalizedPath = path.endsWith("/") ? path.slice(0, -1) : path;
+
+  switch (normalizedPath) {
     case "/register":
       handler.setRegisterFormListener();
       return;
