@@ -12,6 +12,9 @@ export function renderLogin() {
   document.getElementById("logoutBtn").style.display = token
     ? "initial"
     : "none";
+  document.getElementById("profileLink").style.display = token
+    ? "block"
+    : "none";
 }
 
 // Change the title of a page
