@@ -14,10 +14,16 @@ export function listingTemplate(listingData) {
 
     <div class="d-flex flex-column gap-5">
       <div class="d-flex flex-column gap-2">
-        <p class="fw-light m-0">Leading bid<span class="fw-bold"> ${totalAmount(listingData.bids)} </span></p>
-        <p class="fw-light m-0">Bids <span class="fw-bold">${listingData._count.bids}</span></p>
+        <p class="fw-light m-0">Leading bid<span class="fw-bold"> ${totalAmount(
+          listingData.bids
+        )} </span></p>
+        <p class="fw-light m-0">Bids <span class="fw-bold">${
+          listingData._count.bids
+        }</span></p>
         <p class="fw-light m-0">Ends <span class="fw-bold">${
-          listingData.endsAt < new Date().toISOString() ? "Listing has ended" : dateCountDown(listingData.endsAt)
+          listingData.endsAt < new Date().toISOString()
+            ? "Listing has ended"
+            : dateCountDown(listingData.endsAt)
         }</span></p>
       </div>
 
@@ -50,7 +56,7 @@ export function listingTemplate(listingData) {
         </div>
       </div>
     </div>
-    <div data-visible="loggedIn">
+    <div data-visible="loggedIn" style="display: none;">
     <h3 class="fs-4 mb-4">Bid history</h3>
     <ul id="bidHistory"></ul>
   </div>

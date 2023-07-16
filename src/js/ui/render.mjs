@@ -6,6 +6,10 @@ export function renderLogin() {
   document.body.classList[token ? "add" : "remove"]("logged-in");
 }
 
+// Toggle the display property of the buttons using JavaScript
+document.getElementById("loginBtn").style.display = token ? "none" : "initial";
+document.getElementById("logoutBtn").style.display = token ? "initial" : "none";
+
 // Change the title of a page
 export function documentTitle(pageTitle) {
   document.title = `Auction House | ${pageTitle}`;
