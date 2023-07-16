@@ -10,7 +10,7 @@ export default function router() {
     return normalizedPath || "/";
   }
 
-  switch (normalizePath) {
+  switch (normalizePath()) {
     case "/register":
       handler.setRegisterFormListener();
       return;
