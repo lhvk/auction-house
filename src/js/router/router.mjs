@@ -4,13 +4,9 @@ import { renderProfileButtonTemplate } from "../templates/profileButton.mjs";
 import * as page from "../views/index.mjs";
 
 export default function router() {
-  const path = location.pathname;
-  function normalizePath() {
-    const normalizedPath = path.endsWith("/") ? path.slice(0, -1) : path;
-    return normalizedPath || "/";
-  }
+  const normalizedPath = util.normalizePath();
 
-  switch (normalizePath()) {
+  switch (normalizedPath) {
     case "/register":
       handler.setRegisterFormListener();
       return;

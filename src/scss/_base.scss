@@ -26,6 +26,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   height: 100%;
+  // prevent scrollbar from pushing content
+  overflow-y: scroll;
 
   [data-visible="loggedIn"] {
     display: none;
