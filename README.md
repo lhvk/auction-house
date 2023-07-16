@@ -1,5 +1,7 @@
 # auction-house
 
+![Image of the landing page]("/src/assets/home.png")
+
 ### Built using
 
 [![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
