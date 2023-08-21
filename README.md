@@ -15,11 +15,7 @@ npm install
 
 ### Dependencies
 
-The project depends on Bootstrap for styling. You can install it using the following command:
-
-```
-npm install bootstrap
-```
+The project depends on Bootstrap for styling.
 
 ### Dev-dependencies
 
@@ -37,10 +33,8 @@ npm run build
 
 ### Development Server
 
-To start the development server and view the website locally, use the following command:
-
 ```
-npm start
+npm run dev
 ```
 
 This will run the Sass compiler and start the Webpack development server using the concurrently package.
